@@ -16,6 +16,7 @@ import Menu from '@mui/material/Menu';
 import Badge from '@mui/material/Badge';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { Outlet, Link } from "react-router-dom";
 
 const theme = createTheme({
   typography: {
@@ -86,7 +87,7 @@ const Search = styled('div')(({ theme }) => ({
     },
   }));
 
-function Header() {
+function NavBar() {
 
     return (
        /* <header id="header"> 
@@ -140,6 +141,15 @@ function Header() {
            <MenuItem
             
            >
+             <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/courses">Courses</Link>
+            </li>
+          </ul>
+        
              <IconButton size="large" aria-label="show 4 itens" color="inherit" >
              <Badge badgeContent={4} color="error">
              <ShoppingCartIcon />
@@ -156,12 +166,12 @@ function Header() {
             </Toolbar>
           </AppBar>
           <Toolbar /> 
-          
+          <Outlet /> 
         </Box>
 
         
-        
+    
     )
 }
 
-export default Header;
+export default NavBar;

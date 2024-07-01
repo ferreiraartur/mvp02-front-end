@@ -1,9 +1,10 @@
 import React from 'react';
 import Slider from 'react-slick';
-import { Grid } from '@mui/material';
+import { Card, CardContent, Typography, CardMedia,CardActions,Link, Button, Grid, Box} from '@mui/material';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import CourseCard from '../components/CourseCard.jsx';
+
 
 const CourseCarousel = ({ courses }) => {
   const settings = {
@@ -31,16 +32,22 @@ const CourseCarousel = ({ courses }) => {
   };
 
   return (
-    <Slider {...settings}> 
+    <Box display="flex" justifyContent="center" alignItems="center" >
+    <Slider {...settings} style={{ width: 1300 }} > 
           
       {courses.map((course) => (
         <Grid key={course.id} item >
           <CourseCard course={course} />
+          <CardActions>
+            <Button component={Link} to="/courses" size="small">Learn More</Button>
+          </CardActions>
         </Grid>
       ))}
       
     </Slider>
+    </Box>
   );
+  
 };
 
 export default CourseCarousel;

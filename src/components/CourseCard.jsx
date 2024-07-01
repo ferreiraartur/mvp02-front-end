@@ -1,18 +1,17 @@
 import React from 'react';
-import { Card, CardContent, Typography, CardMedia, Grid } from '@mui/material';
+import { Card, CardContent, Typography, CardMedia, Grid, Box} from '@mui/material';
 
 const CourseCards = ({ course }) => {
   return (
-    <div style={{ padding: 15 }} >
-    <Grid container spacing={2} justify="center" >
-      
-    <Card sx={{  borderRadius: 5,width: '100%' }}>
+   <div style={{ padding: 15 }} >
+    
+    <Card style={{ width: 300, height: 250 }} sx={{   borderRadius: 5}}>
       <CardMedia
+        height= "160" 
         component="img"
-        height="150"
         image={course.imageUrl}
-        alt={course.name}
-      />
+        alt={course.name}>
+      </CardMedia>
       <hr></hr>
       <CardContent>
         <Typography variant="h5" component="div">
@@ -22,10 +21,13 @@ const CourseCards = ({ course }) => {
           {course.description}
         </Typography>
       </CardContent>
+      
     </Card>
+</div>
     
-    </Grid>
-    </div>
+    
+    
+    //</div>
     
   );
 };
