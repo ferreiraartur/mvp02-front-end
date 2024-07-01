@@ -37,12 +37,11 @@ const CourseCarousel = ({ courses }) => {
           
       {courses.map((course) => (
         <Grid key={course.id} item >
-          <CourseCard course={course} />
-          <CardActions>
-            <Button component={Link} to="/courses" size="small">Learn More</Button>
-          </CardActions>
+          <CourseCard course={course} /> 
         </Grid>
+        
       ))}
+      
       
     </Slider>
     </Box>

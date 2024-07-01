@@ -109,10 +109,13 @@ function NavBar() {
                   variant="h6"
                   noWrap
                   component="div"
-      
+                   
+                  
                   sx={{ ...logoStyles,borderRadius: '16px' , flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
                 ><b>
                     KIAINFO
+                    
+                    
                   </b>
                 </Typography>
                 </ThemeProvider>
