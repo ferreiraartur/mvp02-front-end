@@ -4,7 +4,7 @@ import Home from "./pages/Home.jsx"
 import Courses from "./pages/Courses.jsx"
 import Cart from "./pages/Cart.jsx"
 import Checkout from "./pages/Checkout.jsx"
-//import NoPage from "./pages/NoPage";
+import NoPage from "./pages/NoPage";
 import Layout  from "./components/Layout.jsx";
 
 
@@ -19,7 +19,7 @@ function RoutePages(){
                     <Route path="courses" element={<Courses />} />
                     <Route path="cart" element={<Cart />} />
                     <Route path="checkout" element={<Checkout />} />
-                   {/* <Route path="*" element={<NoPage />} /> */}
+                    <Route path="*" element={<NoPage />} />
                 </Route>
             </Routes>          
        </BrowserRouter>
