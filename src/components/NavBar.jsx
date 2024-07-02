@@ -151,6 +151,7 @@ function NavBar() {
             <li>
               <Link to="/courses">Courses</Link>
             </li>
+            
           </ul>
         
              <IconButton size="large" aria-label="show 4 itens" color="inherit" >

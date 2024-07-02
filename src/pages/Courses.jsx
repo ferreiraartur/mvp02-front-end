@@ -10,7 +10,8 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import { Toolbar } from '@mui/material';
-
+import LeftBar  from '../components/LeftBar';
+import RightBar from '../components/RightBar'
 
 // Exemplo de dados para os cards
 const cards = [
@@ -26,26 +27,7 @@ function Courses(){
   return (
     <Grid container spacing={2}>
       {/* leftBar (Drawer esquerdo) */}
-      <Grid item xs={1.5}>
-        <Drawer
-          variant="permanent"
-          anchor="left"
-          sx={{
-            width: 240,
-            flexShrink: 0,
-            '& .MuiDrawer-paper': {
-              width: 240,
-              boxSizing: 'border-box',
-            },
-          }}
-        >
-          <Typography variant="h6" sx={{ p: 2 }}>
-            Left Bar
-          </Typography>
-          <Divider />
-          
-        </Drawer>
-      </Grid>
+      <LeftBar />
 
       {/* Conteúdo principal */}
       <Grid item xs={9}>
@@ -76,26 +58,7 @@ function Courses(){
       </Grid>
 
       {/* rightBar (Drawer direito) */}
-      <Grid item xs={3}>
-        <Drawer
-          variant="permanent"
-          anchor="right"
-          sx={{
-            width: 240,
-            flexShrink: 0,
-            '& .MuiDrawer-paper': {
-              width: 240,
-              boxSizing: 'border-box',
-            },
-          }}
-        >
-          <Typography variant="h6" sx={{ p: 2 }}>
-            Right Bar
-          </Typography>
-          <Divider />
-          
-        </Drawer>
-      </Grid>
+      <RightBar />
     </Grid>
   );
 };
