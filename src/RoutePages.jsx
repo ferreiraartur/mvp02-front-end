@@ -4,7 +4,7 @@ import Home from "./pages/Home.jsx"
 import Courses from "./pages/Courses.jsx"
 //import NoPage from "./pages/NoPage";
 import Layout  from "./components/Layout.jsx";
-import NavBar from "./components/NavBar.jsx";
+
 
 
 function RoutePages(){

@@ -4,8 +4,6 @@ import Footer from '../components/Footer.jsx';
 import { Container, Grid, Paper, Toolbar } from '@mui/material';
 
 
-
-
 function Layout(props){
     return (
     <>

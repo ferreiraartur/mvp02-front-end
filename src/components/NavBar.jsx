@@ -98,7 +98,7 @@ function NavBar() {
     */
 
         <Box sx={{ flexGrow: 1}}>
-          <AppBar position="fixed">
+          <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
             <Toolbar>
               <Stack direction="row" alignItems="center">  
 

@@ -25,7 +25,7 @@ function Footer(){
     
     return (
         <Box>
-        <AppBar sx={{...footerStylesBar}}>
+        <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1, ...footerStylesBar }}>
             <Toolbar>
                 <Typography sx={{...footerStyles}}>© kiainfo.com.br 2014. Todos os direitos reservados</Typography>
             </Toolbar>

@@ -41,9 +41,6 @@ const CourseCards = ({ course }) => {
 </div>
     
     
-    
-    //</div>
-    
   );
 };
 
