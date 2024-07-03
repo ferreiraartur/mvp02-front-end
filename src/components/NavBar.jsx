@@ -17,6 +17,7 @@ import Badge from '@mui/material/Badge';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Outlet, Link } from "react-router-dom";
+import CartItem from './CartItem';
 
 const theme = createTheme({
   typography: {
@@ -87,7 +88,7 @@ const Search = styled('div')(({ theme }) => ({
     },
   }));
 
-function NavBar() {
+function NavBar(props) {
 
     return (
        /* <header id="header"> 
@@ -96,7 +97,7 @@ function NavBar() {
             
         </header>
     */
-
+        
         <Box sx={{ flexGrow: 1}}>
           <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
             <Toolbar>
@@ -150,14 +151,15 @@ function NavBar() {
             </li>
             <li>
               <Link to="/courses">Courses</Link>
+              
             </li>
             
           </ul>
-        
+              console.log(CartItem.quantity);
              <IconButton size="large" aria-label="show 4 itens" color="inherit" >
-             <Badge badgeContent={4} color="error">
-             <ShoppingCartIcon />
-             </Badge>
+              <Badge badgeContent={props.CartItem} color="error">
+                <ShoppingCartIcon />
+              </Badge>
             </IconButton>
             
             <Button sx={{ ...loginStyles, borderRadius: '16px' }} color="inherit">Sign in</Button>
