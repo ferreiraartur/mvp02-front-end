@@ -1,5 +1,5 @@
 //import logo from '../assets/logo.png';
-import * as React from 'react';
+import React, { useState, createContext, useContext } from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -18,6 +18,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Outlet, Link } from "react-router-dom";
 import CartItem from './CartItem';
+import CountContext from './CartItem';
 
 const theme = createTheme({
   typography: {
@@ -88,16 +89,17 @@ const Search = styled('div')(({ theme }) => ({
     },
   }));
 
-function NavBar(props) {
+  
+
+function NavBar({count}) {
+
+  
+  
 
     return (
-       /* <header id="header"> 
-            {/* <img src={logo} alt="logo do site"/> 
-            <h1>Treinamento</h1>
-            
-        </header>
-    */
-        
+<>
+      
+              
         <Box sx={{ flexGrow: 1}}>
           <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
             <Toolbar>
@@ -155,9 +157,10 @@ function NavBar(props) {
             </li>
             
           </ul>
-              console.log(CartItem.quantity);
+         
+              
              <IconButton size="large" aria-label="show 4 itens" color="inherit" >
-              <Badge badgeContent={props.CartItem} color="error">
+              <Badge badgeContent={count} color="error">
                 <ShoppingCartIcon />
               </Badge>
             </IconButton>
@@ -175,7 +178,7 @@ function NavBar(props) {
           <Outlet /> 
         </Box>
 
-        
+       </> 
     
     )
 }

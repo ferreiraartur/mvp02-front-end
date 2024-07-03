@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, createContext, useContext } from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
@@ -8,11 +8,17 @@ import AddIcon from '@mui/icons-material/Add';
 import NavBar from './NavBar';
 import Courses from '../pages/Courses';
 import Cart from '../pages/Cart';
+import NoPage from "../pages/NoPage";
 
 
-    const CartItem = ({id, title, price, quantity}) => {
+
+function CartItem({id, title, price, quantity}) {
+
         
-        const [itemQuantity, setItemQuantity] = useState(quantity); 
+
+    const [itemQuantity, setItemQuantity] = useState(quantity); 
+
+    const [count, setCount] = useState(0);
     
 
         const decreaseItem = () => {
@@ -27,15 +33,11 @@ import Cart from '../pages/Cart';
 
     return (
         <>
-        <div>
-            <NavBar itemQuantity={itemQuantity} setItemQuantity={setItemQuantity} quantity={quantity} />
-            <Courses itemQuantity={itemQuantity} setItemQuantity={setItemQuantity} quantity={quantity} />
-            <Cart itemQuantity={itemQuantity} setItemQuantity={setItemQuantity} quantity={quantity} />
-        </div>
 
         
         
         </>
-    )}
+    );
+};
 
 export default CartItem;
