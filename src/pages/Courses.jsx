@@ -44,8 +44,17 @@ const cards = [
 function Courses(){
 
   const [count, setCount] = useState(0);
+  const [disabled, setDisabled] = useState(false);
 
-  
+  const handleClick = () => {
+    // Lógica para manipular o clique do botão
+    console.log('Botão clicado!');
+
+    setCount(setCount => count + 1)
+    //setDisabled(true);
+    
+  };
+
   
 
 
@@ -63,7 +72,7 @@ function Courses(){
         
 
         <Typography variant="h4">Listagem de Cursos</Typography>
-        console.log ({count});
+        
         <List>
           {cards.map((card) => (
             <ListItem key={card.id}>
@@ -100,10 +109,13 @@ function Courses(){
                   </Contexto.Provider>
 
                   <Grid item xs={12} container justifyContent="flex-end">
-                      <Button onClick={() => setCount(count + 1)} variant="contained" color="primary" sx={{ marginLeft: 'auto' }}>
+                      
+                  
+                      <Button  onClick={handleClick} variant="contained" color="primary" sx={{ marginLeft: 'auto' }}>
                        Comprar
                        
                       </Button>
+                     
 
                       
 
