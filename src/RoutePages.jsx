@@ -5,6 +5,7 @@ import Courses from "./pages/Courses.jsx"
 import Cart from "./pages/Cart.jsx"
 import Checkout from "./pages/Checkout.jsx"
 import NoPage from "./pages/NoPage";
+import PageTeste from "./pages/PageTeste.jsx";
 import Layout  from "./components/Layout.jsx";
 import CartItem  from "./components/CartItem.jsx";
 
@@ -21,6 +22,7 @@ function RoutePages(){
                     <Route path="cart" element={<Cart />} />
                     <Route path="checkout" element={<Checkout />} />
                     <Route path="*" element={<NoPage />} />
+                    <Route path="pageteste" element={<PageTeste />} />
                 </Route>
             </Routes>         
        </BrowserRouter>

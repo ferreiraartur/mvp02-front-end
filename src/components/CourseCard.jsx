@@ -6,8 +6,8 @@ const CourseCards = ({ course }) => {
   return (
    <div style={{ padding: 15 }} >
     
-    <Card style={{ width: 300, height: 250 }} sx={{   borderRadius: 5}}>
-    <CardActionArea>
+    <Card style={{ width: 300, height: 300 }} sx={{   borderRadius: 5}}>
+    
       <CardMedia
         height= "160" 
         component="img"
@@ -26,13 +26,15 @@ const CourseCards = ({ course }) => {
         
       </CardContent>
 
-      </CardActionArea>
-      <CardActions>
+      <CardActionArea>  
+      
         <Button component={Link} to="/courses" size="small" color="primary">
-          Share
+          Mais detalhes
         </Button>
+      
+      </CardActionArea>
         
-      </CardActions>
+      
       
       
     </Card>

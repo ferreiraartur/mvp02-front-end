@@ -1,5 +1,5 @@
 //import logo from '../assets/logo.png';
-import React, { useState, createContext, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -18,7 +18,8 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Outlet, Link } from "react-router-dom";
 import CartItem from './CartItem';
-import CountContext from './CartItem';
+// 3 - Consumir o contexto
+import { Contexto } from '../pages/Courses'
 
 const theme = createTheme({
   typography: {
@@ -91,15 +92,17 @@ const Search = styled('div')(({ theme }) => ({
 
   
 
-function NavBar({count}) {
+function NavBar() {
+
+  // 4 - Usar o contexto
+  const count  = useContext(Contexto);
 
   
-  
+ 
 
     return (
-<>
-      
-              
+      <>
+        
         <Box sx={{ flexGrow: 1}}>
           <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
             <Toolbar>
@@ -116,9 +119,7 @@ function NavBar({count}) {
                   
                   sx={{ ...logoStyles,borderRadius: '16px' , flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
                 ><b>
-                    KIAINFO
-                    
-                    
+                    KIAINFO            
                   </b>
                 </Typography>
                 </ThemeProvider>
@@ -146,20 +147,9 @@ function NavBar({count}) {
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
            <MenuItem
             
-           >
-             <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/courses">Courses</Link>
-              
-            </li>
-            
-          </ul>
-         
-              
+           > 
              <IconButton size="large" aria-label="show 4 itens" color="inherit" >
+              
               <Badge badgeContent={count} color="error">
                 <ShoppingCartIcon />
               </Badge>
@@ -174,12 +164,12 @@ function NavBar({count}) {
       
             </Toolbar>
           </AppBar>
-          <Toolbar /> 
+          
           <Outlet /> 
         </Box>
 
-       </> 
-    
+       
+        </>
     )
 }
 

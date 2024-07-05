@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, createContext, useContext } from 'react';
 import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -12,6 +12,10 @@ import ListItemText from '@mui/material/ListItemText';
 import { Toolbar,CardMedia } from '@mui/material';
 import LeftBar  from '../components/LeftBar';
 import RightBar from '../components/RightBar'
+import NavBar from  '../components/NavBar'
+
+// 1 - Criar um contexto
+export const Contexto = createContext();
 
 // Exemplo de dados para os cards
 const cards = [
@@ -39,19 +43,27 @@ const cards = [
 
 function Courses(){
 
+  const [count, setCount] = useState(0);
+
+  
+  
+
 
 
   return (
+    
     <Grid container spacing={2}>
       {/* leftBar (Drawer esquerdo) */}
       <LeftBar />
-
+      
       {/* Conteúdo principal */}
 
       <Grid item xs={9}>
         <Toolbar />
+        
 
         <Typography variant="h4">Listagem de Cursos</Typography>
+        console.log ({count});
         <List>
           {cards.map((card) => (
             <ListItem key={card.id}>
@@ -81,10 +93,23 @@ function Courses(){
                   <Typography variant="h7">
                    Preço: R$ {card.price}
                   </Typography>
+
+                  <Contexto.Provider value={count}>
+                    <NavBar count={count}> </NavBar>
+
+                  </Contexto.Provider>
+
                   <Grid item xs={12} container justifyContent="flex-end">
-                      <Button variant="contained" color="primary" sx={{ marginLeft: 'auto' }}>
+                      <Button onClick={() => setCount(count + 1)} variant="contained" color="primary" sx={{ marginLeft: 'auto' }}>
                        Comprar
-                  </Button>
+                       
+                      </Button>
+
+                      
+
+                  
+
+                 
                   </Grid>
                 </CardContent>
                 </Grid>
