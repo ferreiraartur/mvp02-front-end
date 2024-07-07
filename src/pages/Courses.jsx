@@ -1,4 +1,4 @@
-import React, { useState, createContext, useContext } from 'react';
+import React, { useState, createContext, useContext, useEffect } from 'react';
 import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -13,10 +13,17 @@ import { Toolbar,CardMedia } from '@mui/material';
 import LeftBar  from '../components/LeftBar';
 import RightBar from '../components/RightBar'
 import NavBar from  '../components/NavBar'
+import dados from '../dados.json'
+import Cart from '../pages/Cart'
+import axios from 'axios';
+
 
 // 1 - Criar um contexto
 export const Contexto = createContext();
 
+
+
+/*
 // Exemplo de dados para os cards
 const cards = [
     { id: 1, category: 'DevOps', title: 'Docker Certified Associate', price: '29.99', content: 'This Docker training course is intended for the learners who is preparing for the Docker Certified Associate (DCA) certification exam.', imageUrl: '/src/assets/courses/course01.png'  },
@@ -38,13 +45,29 @@ const cards = [
     { id: 17, category: 'Python', title: 'Card 17', content: 'Conteúdo do Card 17', price: '19.99', imageUrl: '/src/assets/courses/course01.png'},
     { id: 18, category: 'Python', title: 'Card 18', content: 'Conteúdo do Card 18', price: '19.99', imageUrl: '/src/assets/courses/course01.png'},
   ];
-
+*/
   
 
 function Courses(){
 
   const [count, setCount] = useState(0);
   const [disabled, setDisabled] = useState(false);
+  const [courses, setCourses] = useState([]);
+
+  const [carrinho, setCarrinho] = useState([]);
+
+  const adicionarAoCarrinho = (course) => {
+    setCarrinho([...carrinho, course]);
+  };
+
+  
+
+  useEffect(() => {
+    setCourses(dados.courses)
+  }, []);
+
+
+
 
   const handleClick = () => {
     // Lógica para manipular o clique do botão
@@ -60,6 +83,8 @@ function Courses(){
 
 
   return (
+
+    
     
     <Grid container spacing={2}>
       {/* leftBar (Drawer esquerdo) */}
@@ -69,13 +94,11 @@ function Courses(){
 
       <Grid item xs={9}>
         <Toolbar />
-        
-
         <Typography variant="h4">Listagem de Cursos</Typography>
         
         <List>
-          {cards.map((card) => (
-            <ListItem key={card.id}>
+          { courses.map((course) => (
+            <ListItem key={course.id}>
               <Card sx={{ width: '100%' }}>
                 <Grid container spacing={2}>
 
@@ -85,8 +108,8 @@ function Courses(){
                 
                       sx={{ width: '180px', height: '150px' }} 
                       component="img"
-                      image={card.imageUrl}
-                      alt={card.title}>
+                      image={course.imageUrl}
+                      alt={course.title}>
                 
                     </CardMedia>
                   </Grid>
@@ -94,19 +117,14 @@ function Courses(){
                 <Grid item xs={10}>
                  <CardContent>
                   <Typography variant="h6" component="div">
-                    {card.title}
+                    {course.title}
                   </Typography>
                   <Typography variant="body1" component="div">
-                    {card.content}
+                    {course.content}
                   </Typography>
                   <Typography variant="h7">
-                   Preço: R$ {card.price}
+                   Preço: R$ {course.price}
                   </Typography>
-
-                  <Contexto.Provider value={count}>
-                    <NavBar count={count}> </NavBar>
-
-                  </Contexto.Provider>
 
                   <Grid item xs={12} container justifyContent="flex-end">
                       
@@ -115,15 +133,8 @@ function Courses(){
                        Comprar
                        
                       </Button>
-                     
-
-                      
-
-                  
-
-                 
                   </Grid>
-                </CardContent>
+                 </CardContent>
                 </Grid>
               </Grid>
               </Card>
@@ -131,6 +142,18 @@ function Courses(){
           ))}
         </List>
       </Grid>
+
+      <section>
+        <Contexto.Provider value={count}>
+          <NavBar count={count}> </NavBar>
+            
+          
+          <Cart courses={courses} />
+            
+                     
+
+        </Contexto.Provider>
+      </section>
 
       {/* rightBar (Drawer direito) */}
       <RightBar />
