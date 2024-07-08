@@ -18,23 +18,23 @@ const CartModal = ({ anchorEl, handleClose }) => {
    // return carrinho.reduce((total, item) => total + item.price , 0);
   //};
 
-  const handleAddItem = (id) => {
-    const updatedItems = items.map(item =>
-      item.id === id ? { ...item, quantity: item.quantity + 1 } : item
-    );
-    setItems(updatedItems);
-  };
+ // const handleAddItem = (id) => {
+ //   const updatedItems = items.map(item =>
+  //    item.id === id ? { ...item, quantity: item.quantity + 1 } : item
+   // );
+  //  setItems(updatedItems);
+  //};
 
-  const handleRemoveItem = (id) => {
-    const updatedItems = carrinho.map(item =>
-      item.id === id && item.quantity > 1 ? { ...item, quantity: item.quantity - 1 } : item
-    );
-    setItems(updatedItems);
-  };
+  //const handleRemoveItem = (id) => {
+   // const updatedItems = carrinho.map(item =>
+   //   item.id === id && item.quantity > 1 ? { ...item, quantity: item.quantity - 1 } : item
+   // );
+  //  setItems(updatedItems);
+  //};
 
   const handleDeleteItem = (id) => {
     const updatedItems = carrinho.filter(item => item.id !== id);
-    setItems(updatedItems);
+    setCarrinho(updatedItems);
   };
 
   return (

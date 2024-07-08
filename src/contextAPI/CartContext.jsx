@@ -31,15 +31,17 @@ const CartProvider = ({ children }) => {
         carrinho.map((course) => (
           console.log("teste1234" + course.title)
         ))
-    
-        //handleClick();
-      
+        //handleClick();   
      };
+
+     const handleClearCart = () => {
+      setCarrinho([]);
+    };
 
 
     return (
         <>
-        <CartContext.Provider  value={{  adicionarAoCarrinho,carrinho, setCarrinho, getTotal}}>
+        <CartContext.Provider  value={{  adicionarAoCarrinho,carrinho, setCarrinho, getTotal, handleClearCart}}>
             {children}
         </CartContext.Provider>
         

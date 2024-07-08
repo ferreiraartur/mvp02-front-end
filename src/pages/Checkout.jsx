@@ -19,7 +19,7 @@ function Checkout(){
 
     const [openModal, setOpenModal] = useState(false);
 
-    const { getTotal } = useContext(CartContext);
+    const { getTotal,handleClearCart } = useContext(CartContext);
     
     const handleOpenModal = () =>{
         setOpenModal(true);
@@ -104,7 +104,9 @@ function Checkout(){
                 email: '',
                 endereco: '',
             });
-            handleOpenModal();        }
+            handleOpenModal();
+            handleClearCart();
+            }
         
       };
 
