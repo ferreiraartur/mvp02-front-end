@@ -99,11 +99,11 @@ const Search = styled('div')(({ theme }) => ({
 function NavBar() {
 
   // 4 - Usar o contexto
-  const { carrinho,handleOpenCart,handleCloseCart,anchorEl } = useContext(CartContext);
+  const { carrinho,handleOpenCart,handleCloseCart,anchorEl,open } = useContext(CartContext);
   //const { carrinho, handleClick, count } = useCarrinho();
 
 
-  const open = Boolean(anchorEl);
+  
   
  
 

@@ -14,12 +14,16 @@ const CartProvider = ({ children }) => {
 
     const [anchorEl, setAnchorEl] = useState(null);
 
+    const open = Boolean(anchorEl);
+
     const handleOpenCart = (event) => {
       console.log(event);
+      console.log('Mouse entrou');
       setAnchorEl(event.currentTarget);
     };
 
     const handleCloseCart = () => {
+      console.log('Mouse saiu');
       setAnchorEl(null);
     };
 
@@ -52,7 +56,7 @@ const CartProvider = ({ children }) => {
 
     return (
         <>
-        <CartContext.Provider  value={{  adicionarAoCarrinho,carrinho, setCarrinho, getTotal, handleClearCart,handleOpenCart,handleCloseCart,anchorEl}}>
+        <CartContext.Provider  value={{  adicionarAoCarrinho,carrinho, setCarrinho, getTotal, handleClearCart,handleOpenCart,handleCloseCart,anchorEl,open}}>
             {children}
         </CartContext.Provider>
         

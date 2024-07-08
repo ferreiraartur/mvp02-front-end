@@ -8,7 +8,7 @@ function CartModal() {
   
  
 
-  const { carrinho,setCarrinho, adicionarAoCarrinho,getTotal,anchorEl,handleClose } = useContext(CartContext);
+  const { carrinho,setCarrinho, adicionarAoCarrinho,getTotal,anchorEl,handleClose,open } = useContext(CartContext);
 
   const handleDeleteItem = (id) => {
     const updatedItems = carrinho.filter(item => item.id !== id);
@@ -21,9 +21,10 @@ function CartModal() {
     sx={{
       pointerEvents: 'none',
     }}
-      open={Boolean(anchorEl)}
+      open={open}
       anchorEl={anchorEl}
       onClose={handleClose}
+      disableRestoreFocus
       anchorOrigin={{
         vertical: 'bottom',
         horizontal: 'right',
@@ -32,7 +33,11 @@ function CartModal() {
         vertical: 'top',
         horizontal: 'right',
       }}
-      disableRestoreFocus
+      onMouseEnter={() => {
+        // Mantém o modal aberto quando o mouse está sobre o Popover
+      }}
+      onMouseLeave={handleClose}
+      
         
     >
       <Grid container spacing={2} sx={{ p: 2, maxWidth: 400 }}>
