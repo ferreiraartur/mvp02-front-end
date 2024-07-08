@@ -4,33 +4,11 @@ import { Outlet, Link } from "react-router-dom";
 
 import { CartContext } from "../contextAPI/CartContext";
 
-const CartModal = ({ anchorEl, handleClose }) => {
+function CartModal() {
   
-  const [items, setItems] = useState([
-    { id: 1, name: 'Product A', price: 10, quantity: 1 },
-    { id: 2, name: 'Product B', price: 15, quantity: 2 },
-    { id: 3, name: 'Product C', price: 20, quantity: 1 },
-  ]);
+ 
 
-  const { carrinho,setCarrinho, adicionarAoCarrinho,getTotal } = useContext(CartContext);
-
-  //const getTotal = () => {
-   // return carrinho.reduce((total, item) => total + item.price , 0);
-  //};
-
- // const handleAddItem = (id) => {
- //   const updatedItems = items.map(item =>
-  //    item.id === id ? { ...item, quantity: item.quantity + 1 } : item
-   // );
-  //  setItems(updatedItems);
-  //};
-
-  //const handleRemoveItem = (id) => {
-   // const updatedItems = carrinho.map(item =>
-   //   item.id === id && item.quantity > 1 ? { ...item, quantity: item.quantity - 1 } : item
-   // );
-  //  setItems(updatedItems);
-  //};
+  const { carrinho,setCarrinho, adicionarAoCarrinho,getTotal,anchorEl,handleClose } = useContext(CartContext);
 
   const handleDeleteItem = (id) => {
     const updatedItems = carrinho.filter(item => item.id !== id);
@@ -39,6 +17,10 @@ const CartModal = ({ anchorEl, handleClose }) => {
 
   return (
     <Popover
+    id="mouse-over-popover"
+    sx={{
+      pointerEvents: 'none',
+    }}
       open={Boolean(anchorEl)}
       anchorEl={anchorEl}
       onClose={handleClose}
@@ -50,6 +32,8 @@ const CartModal = ({ anchorEl, handleClose }) => {
         vertical: 'top',
         horizontal: 'right',
       }}
+      disableRestoreFocus
+        
     >
       <Grid container spacing={2} sx={{ p: 2, maxWidth: 400 }}>
         <Grid item xs={12}>

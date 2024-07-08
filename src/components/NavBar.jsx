@@ -99,19 +99,11 @@ const Search = styled('div')(({ theme }) => ({
 function NavBar() {
 
   // 4 - Usar o contexto
-  const { carrinho } = useContext(CartContext);
+  const { carrinho,handleOpenCart,handleCloseCart,anchorEl } = useContext(CartContext);
   //const { carrinho, handleClick, count } = useCarrinho();
 
 
-  const [anchorEl, setAnchorEl] = useState(null);
-
-  const handleOpenCart = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleCloseCart = () => {
-    setAnchorEl(null);
-  };
+  const open = Boolean(anchorEl);
   
  
 
@@ -165,6 +157,8 @@ function NavBar() {
            > 
            
              <IconButton 
+             aria-owns={open ? 'mouse-over-popover' : undefined}
+             aria-haspopup="true"
              aria-describedby="cart-modal"
              variant="contained"
              onMouseEnter={handleOpenCart}

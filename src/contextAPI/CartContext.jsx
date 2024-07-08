@@ -12,6 +12,17 @@ const CartProvider = ({ children }) => {
     //const [count, setCount] = useState(0);
     const [carrinho, setCarrinho] = useState([]);
 
+    const [anchorEl, setAnchorEl] = useState(null);
+
+    const handleOpenCart = (event) => {
+      console.log(event);
+      setAnchorEl(event.currentTarget);
+    };
+
+    const handleCloseCart = () => {
+      setAnchorEl(null);
+    };
+
     const handleClick = () => {
         // Lógica para manipular o clique do botão
         console.log('Botão clicado!');
@@ -41,7 +52,7 @@ const CartProvider = ({ children }) => {
 
     return (
         <>
-        <CartContext.Provider  value={{  adicionarAoCarrinho,carrinho, setCarrinho, getTotal, handleClearCart}}>
+        <CartContext.Provider  value={{  adicionarAoCarrinho,carrinho, setCarrinho, getTotal, handleClearCart,handleOpenCart,handleCloseCart,anchorEl}}>
             {children}
         </CartContext.Provider>
         
