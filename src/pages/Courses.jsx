@@ -8,57 +8,52 @@ import Drawer from '@mui/material/Drawer';
 import Divider from '@mui/material/Divider';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
 import { Toolbar,CardMedia } from '@mui/material';
 import LeftBar  from '../components/LeftBar';
 import RightBar from '../components/RightBar'
 import NavBar from  '../components/NavBar'
 import dados from '../dados.json'
 import Cart from '../pages/Cart'
-import axios from 'axios';
 
+// 3 - Consumir o contexto
+//import { Contexto } from '../contexts/MyContext';
+import { CartContext } from "../contextAPI/CartContext";
 
 // 1 - Criar um contexto
-export const Contexto = createContext();
+//export const Contexto = createContext();
 
 
-
-/*
-// Exemplo de dados para os cards
-const cards = [
-    { id: 1, category: 'DevOps', title: 'Docker Certified Associate', price: '29.99', content: 'This Docker training course is intended for the learners who is preparing for the Docker Certified Associate (DCA) certification exam.', imageUrl: '/src/assets/courses/course01.png'  },
-    { id: 2, category: 'DevOps', title: 'System Administration Using Puppet',price: '19.99', content: 'Puppet Certification validates the skills of system administrators in administrating system infrastructure and developing basic modules using Puppet.', imageUrl: '/src/assets/courses/course02.png' },
-    { id: 3, category: 'DevOps', title: 'System Administration Using Ansible', price: '19.99',content: 'Learn how to use Ansible to automate management and deployment of the systems in an enterprise environment by simply taking this course.', imageUrl: '/src/assets/courses/course03.png'},
-    { id: 4, category: 'Linux', title: 'Card 4', content: 'Conteúdo do Card 4',price: '19.99', imageUrl: '/src/assets/courses/course01.png'},
-    { id: 5, category: 'Linux', title: 'Card 5', content: 'Conteúdo do Card 5', price: '19.99',imageUrl: '/src/assets/courses/course01.png'},
-    { id: 6, category: 'Linux', title: 'Card 6', content: 'Conteúdo do Card 6', price: '19.99',imageUrl: '/src/assets/courses/course01.png'},
-    { id: 7, category: 'Cloud', title: 'Card 7', content: 'Conteúdo do Card 7', price: '19.99',imageUrl: '/src/assets/courses/course01.png'},
-    { id: 8, category: 'Cloud', title: 'Card 8', content: 'Conteúdo do Card 8', price: '19.99',imageUrl: '/src/assets/courses/course01.png'},
-    { id: 9, category: 'Cloud', title: 'Card 9', content: 'Conteúdo do Card 9', price: '19.99',imageUrl: '/src/assets/courses/course01.png' },
-    { id: 10, category: 'Seguranca', title: 'Card 10', content: 'Conteúdo do Card 10', price: '19.99', imageUrl: '/src/assets/courses/course01.png'},
-    { id: 11, category: 'Seguranca', title: 'Card 11', content: 'Conteúdo do Card 11',price: '19.99', imageUrl: '/src/assets/courses/course01.png'},
-    { id: 12, category: 'Seguranca', title: 'Card 12', content: 'Conteúdo do Card 12', price: '19.99', imageUrl: '/src/assets/courses/course01.png'},
-    { id: 13, category: 'Java', title: 'Card 13', content: 'Conteúdo do Card 13',price: '19.99', imageUrl: '/src/assets/courses/course01.png' },
-    { id: 14, category: 'Java', title: 'Card 14', content: 'Conteúdo do Card 14', price: '19.99', imageUrl: '/src/assets/courses/course01.png'},
-    { id: 15, category: 'Java', title: 'Card 15', content: 'Conteúdo do Card 15', price: '19.99', imageUrl: '/src/assets/courses/course01.png'},
-    { id: 16, category: 'Python', title: 'Card 16', content: 'Conteúdo do Card 16', price: '19.99', imageUrl: '/src/assets/courses/course01.png' },
-    { id: 17, category: 'Python', title: 'Card 17', content: 'Conteúdo do Card 17', price: '19.99', imageUrl: '/src/assets/courses/course01.png'},
-    { id: 18, category: 'Python', title: 'Card 18', content: 'Conteúdo do Card 18', price: '19.99', imageUrl: '/src/assets/courses/course01.png'},
-  ];
-*/
   
 
 function Courses(){
 
-  const [count, setCount] = useState(0);
+  const { count,carrinho,adicionarAoCarrinho } = useContext(CartContext);
+
+ // const carrinho = useMyContext();
+  //const { handleClick}  = useMyContext();
+
+  //const calcularTotal = () => {
+   // return carrinho.reduce((total, course) => total + course.price, 0);
+ // };
+
+ // const [count, setCount] = useState(0);
   const [disabled, setDisabled] = useState(false);
   const [courses, setCourses] = useState([]);
 
-  const [carrinho, setCarrinho] = useState([]);
+ // const [carrinho, setCarrinho] = useState([]);
 
-  const adicionarAoCarrinho = (course) => {
-    setCarrinho([...carrinho, course]);
-  };
+  //const adicionarAoCarrinho = (course) => {
+ //   setCarrinho([...carrinho, course]);
+    //console.log ("teste123" + course.title);
+    //console.log ("teste124" + carrinho.title);
+
+  //  carrinho.map((course) => (
+  //    console.log("teste1234" + course.title)
+  //  ))
+
+ //   handleClick();
+  
+ //};
 
   
 
@@ -69,23 +64,28 @@ function Courses(){
 
 
 
-  const handleClick = () => {
+ // const handleClick = () => {
     // Lógica para manipular o clique do botão
-    console.log('Botão clicado!');
+  //  console.log('Botão clicado!');
 
-    setCount(setCount => count + 1)
+  //  setCount(setCount => count + 1)
     //setDisabled(true);
     
-  };
-
-  
-
-
+ // };
 
   return (
+    <>
+      {/**
+      <section>
+        <Contexto.Provider value={{count, carrinho }}>
+            {children}
+            
+        </Contexto.Provider>
 
-    
-    
+        
+      </section>
+       */}
+
     <Grid container spacing={2}>
       {/* leftBar (Drawer esquerdo) */}
       <LeftBar />
@@ -129,10 +129,12 @@ function Courses(){
                   <Grid item xs={12} container justifyContent="flex-end">
                       
                   
-                      <Button  onClick={handleClick} variant="contained" color="primary" sx={{ marginLeft: 'auto' }}>
+                      
+                      <Button onClick={() => adicionarAoCarrinho(course)} variant="contained" color="primary" sx={{ marginLeft: 'auto' }}>
                        Comprar
                        
                       </Button>
+                      {console.log("testando" +carrinho)}
                   </Grid>
                  </CardContent>
                 </Grid>
@@ -143,22 +145,14 @@ function Courses(){
         </List>
       </Grid>
 
-      <section>
-        <Contexto.Provider value={count}>
-          <NavBar count={count}> </NavBar>
-            
-          
-          <Cart courses={courses} />
-            
-                     
-
-        </Contexto.Provider>
-      </section>
+     
 
       {/* rightBar (Drawer direito) */}
       <RightBar />
     </Grid>
+    </>
   );
+  
 };
 
 export default Courses;

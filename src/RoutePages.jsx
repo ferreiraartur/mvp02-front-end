@@ -7,7 +7,7 @@ import Checkout from "./pages/Checkout.jsx"
 import NoPage from "./pages/NoPage";
 import PageTeste from "./pages/PageTeste.jsx";
 import Layout  from "./components/Layout.jsx";
-import CartItem  from "./components/CartItem.jsx";
+
 
 
 

@@ -10,7 +10,7 @@ import { Toolbar,CardMedia } from '@mui/material';
 import LeftBar  from '../components/LeftBar';
 import RightBar from '../components/RightBar'
 import { Outlet, Link } from "react-router-dom";
-import { Contexto } from '../pages/Courses'
+//import { Contexto } from '../pages/Courses'
 import {FormControl, TextField, Divider} from '@mui/material'
 import Pagamento from '../components/Pagamento'
 

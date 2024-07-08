@@ -17,9 +17,10 @@ import Badge from '@mui/material/Badge';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Outlet, Link } from "react-router-dom";
-import CartItem from './CartItem';
+
 // 3 - Consumir o contexto
-import { Contexto } from '../pages/Courses'
+//import { Contexto } from '../contexts/MyContext';
+import { CartContext } from "../contextAPI/CartContext";
 
 const theme = createTheme({
   typography: {
@@ -95,7 +96,8 @@ const Search = styled('div')(({ theme }) => ({
 function NavBar() {
 
   // 4 - Usar o contexto
-  const count  = useContext(Contexto);
+  const { count } = useContext(CartContext);
+  //const { carrinho, handleClick, count } = useCarrinho();
 
   
  
