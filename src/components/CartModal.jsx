@@ -12,11 +12,11 @@ const CartModal = ({ anchorEl, handleClose }) => {
     { id: 3, name: 'Product C', price: 20, quantity: 1 },
   ]);
 
-  const { carrinho,adicionarAoCarrinho } = useContext(CartContext);
+  const { carrinho,setCarrinho, adicionarAoCarrinho,getTotal } = useContext(CartContext);
 
-  const getTotal = () => {
-    return carrinho.reduce((total, item) => total + item.price , 0);
-  };
+  //const getTotal = () => {
+   // return carrinho.reduce((total, item) => total + item.price , 0);
+  //};
 
   const handleAddItem = (id) => {
     const updatedItems = items.map(item =>

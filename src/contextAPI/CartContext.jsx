@@ -21,6 +21,10 @@ const CartProvider = ({ children }) => {
         
       };
 
+      const getTotal = () => {
+        return carrinho.reduce((total, item) => total + item.price , 0);
+      };
+
       const adicionarAoCarrinho = (course) => {
         setCarrinho([...carrinho, course]);
     
@@ -35,7 +39,7 @@ const CartProvider = ({ children }) => {
 
     return (
         <>
-        <CartContext.Provider  value={{  adicionarAoCarrinho,carrinho, setCarrinho}}>
+        <CartContext.Provider  value={{  adicionarAoCarrinho,carrinho, setCarrinho, getTotal}}>
             {children}
         </CartContext.Provider>
         

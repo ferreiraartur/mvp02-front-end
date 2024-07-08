@@ -13,10 +13,13 @@ import { Outlet, Link } from "react-router-dom";
 //import { Contexto } from '../pages/Courses'
 import {FormControl, TextField, Divider} from '@mui/material'
 import Pagamento from '../components/Pagamento'
+import { CartContext } from "../contextAPI/CartContext";
 
 function Checkout(){
 
     const [openModal, setOpenModal] = useState(false);
+
+    const { getTotal } = useContext(CartContext);
     
     const handleOpenModal = () =>{
         setOpenModal(true);
@@ -261,7 +264,7 @@ function Checkout(){
                                         <Divider variant="fullWidth" />
                                         
                                         <Typography variant="body1" component="div">
-                                            Subtotal:
+                                            Subtotal: ${getTotal()}
                                         </Typography>
                                         
                                         <Typography variant="h7">
@@ -269,7 +272,7 @@ function Checkout(){
                                         </Typography>
                                         <Divider variant="fullWidth" />
                                         <Typography variant="h7">
-                                            R$ 
+                                            R$ ${getTotal()}
                                         </Typography>
                                         
                                         <Toolbar />

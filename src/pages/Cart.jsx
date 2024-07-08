@@ -22,7 +22,7 @@ function Cart(){
 
     //const [courseList, setCourseList]  = useContext(Contexto);
     
-    const { carrinho,adicionarAoCarrinho } = useContext(CartContext);
+    const { carrinho,adicionarAoCarrinho,getTotal } = useContext(CartContext);
     
     
     const handleClick = () => {
@@ -37,7 +37,7 @@ function Cart(){
             <Grid item xs={7}>
                 <Toolbar />
                 <Toolbar />
-                <Typography variant="h4">0 Curso(s) no carrinho</Typography>
+                <Typography variant="h4">{carrinho.length} Curso(s) no carrinho</Typography>
                 <List>                  
                      {carrinho.map((course) => ( 
                     <ListItem key={course.id}>
@@ -94,13 +94,11 @@ function Cart(){
                                             Resumo de compra
                                         </Typography>
                                         <Typography variant="body1" component="div">
-                                            Subtotal
+                                            Subtotal: ${getTotal()}
                                         </Typography>
+                                        
                                         <Typography variant="h7">
-                                            Desconto: 
-                                        </Typography>
-                                        <Typography variant="h7">
-                                            R$ 
+                                            Total: ${getTotal()} 
                                         </Typography>
                                         
 
