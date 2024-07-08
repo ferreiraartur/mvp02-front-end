@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { Button, Typography, Grid, Card, CardActions, CardContent, CardHeader, Popover } from '@mui/material';
+import { Outlet, Link } from "react-router-dom";
 
 import { CartContext } from "../contextAPI/CartContext";
 
@@ -25,14 +26,14 @@ const CartModal = ({ anchorEl, handleClose }) => {
   };
 
   const handleRemoveItem = (id) => {
-    const updatedItems = items.map(item =>
+    const updatedItems = carrinho.map(item =>
       item.id === id && item.quantity > 1 ? { ...item, quantity: item.quantity - 1 } : item
     );
     setItems(updatedItems);
   };
 
   const handleDeleteItem = (id) => {
-    const updatedItems = items.filter(item => item.id !== id);
+    const updatedItems = carrinho.filter(item => item.id !== id);
     setItems(updatedItems);
   };
 
@@ -67,9 +68,9 @@ const CartModal = ({ anchorEl, handleClose }) => {
                 
               </CardContent>
               <CardActions>
-                <Button onClick={() => handleAddItem(item.id)} variant="outlined" size="small">+</Button>
-                <Button onClick={() => handleRemoveItem(item.id)} variant="outlined" size="small">-</Button>
+                
                 <Button onClick={() => handleDeleteItem(item.id)} variant="outlined" size="small">Remove</Button>
+                
               </CardActions>
             </Card>
           </Grid>
@@ -78,6 +79,9 @@ const CartModal = ({ anchorEl, handleClose }) => {
           <Typography variant="h6" align="right">
             Total: ${getTotal()}
           </Typography>
+          <Button component={Link} to="/cart" variant="contained" color="primary" sx={{ marginLeft: 'auto' }}>
+            Continuar           
+          </Button>
         </Grid>
       </Grid>
     </Popover>
