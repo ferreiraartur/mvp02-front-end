@@ -9,7 +9,7 @@ const CartContext = createContext();
 
 const CartProvider = ({ children }) => {
 
-    const [count, setCount] = useState(0);
+    //const [count, setCount] = useState(0);
     const [carrinho, setCarrinho] = useState([]);
 
     const handleClick = () => {
@@ -28,14 +28,14 @@ const CartProvider = ({ children }) => {
           console.log("teste1234" + course.title)
         ))
     
-        handleClick();
+        //handleClick();
       
      };
 
 
     return (
         <>
-        <CartContext.Provider  value={{ count, adicionarAoCarrinho, handleClick,carrinho, setCarrinho}}>
+        <CartContext.Provider  value={{  adicionarAoCarrinho,carrinho, setCarrinho}}>
             {children}
         </CartContext.Provider>
         

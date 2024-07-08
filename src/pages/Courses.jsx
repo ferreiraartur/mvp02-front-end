@@ -27,7 +27,7 @@ import { CartContext } from "../contextAPI/CartContext";
 
 function Courses(){
 
-  const { count,carrinho,adicionarAoCarrinho } = useContext(CartContext);
+  const { carrinho,adicionarAoCarrinho } = useContext(CartContext);
 
  // const carrinho = useMyContext();
   //const { handleClick}  = useMyContext();

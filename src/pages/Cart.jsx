@@ -22,7 +22,7 @@ function Cart(){
 
     //const [courseList, setCourseList]  = useContext(Contexto);
     
-    const { count,carrinho,adicionarAoCarrinho } = useContext(CartContext);
+    const { carrinho,adicionarAoCarrinho } = useContext(CartContext);
     
     
     const handleClick = () => {

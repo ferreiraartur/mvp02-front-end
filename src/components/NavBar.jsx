@@ -1,5 +1,5 @@
 //import logo from '../assets/logo.png';
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext,useRef } from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -17,6 +17,7 @@ import Badge from '@mui/material/Badge';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Outlet, Link } from "react-router-dom";
+import CartModal from '../components/CartModal';
 
 // 3 - Consumir o contexto
 //import { Contexto } from '../contexts/MyContext';
@@ -93,11 +94,31 @@ const Search = styled('div')(({ theme }) => ({
 
   
 
+  
+
 function NavBar() {
 
   // 4 - Usar o contexto
-  const { count } = useContext(CartContext);
+  const { carrinho } = useContext(CartContext);
   //const { carrinho, handleClick, count } = useCarrinho();
+
+
+  const modal = useRef();
+
+  function handleOpenCartClick() {
+    modal.current.open();
+  }
+
+
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
+  const handleOpenCart = () => {
+    setIsCartOpen(true);
+  };
+
+  const handleCloseCart = () => {
+    setIsCartOpen(false);
+  };
 
   
  
@@ -150,12 +171,23 @@ function NavBar() {
            <MenuItem
             
            > 
-             <IconButton size="large" aria-label="show 4 itens" color="inherit" >
+           
+             <IconButton 
+             
+             
+             size="large" aria-label="show 4 itens" color="inherit" >
               
-              <Badge badgeContent={count} color="error">
+              <Badge
+              aria-describedby="cart-modal"
+              variant="contained"
+              onMouseEnter={handleOpenCartClick}
+              onMouseLeave={handleCloseCart}
+
+              badgeContent={carrinho.length} color="error">
                 <ShoppingCartIcon />
               </Badge>
             </IconButton>
+            <CartModal isOpen={isCartOpen}  handleClose={handleCloseCart} />
             
             <Button sx={{ ...loginStyles, borderRadius: '16px' }} color="inherit">Sign in</Button>
             <Button sx={{ ...loginStyles, borderRadius: '16px' }}  color="inherit"><b>Sign up</b></Button>

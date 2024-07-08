@@ -11,7 +11,9 @@
         { 
             "id": 2, 
             "category": "DevOps",
-            "title": "System Administration Using Puppet',price: '19.99', content: 'Puppet Certification validates the skills of system administrators in administrating system infrastructure and developing basic modules using Puppet.",
+            "title": "Puppet Expert",
+            "price": 19.99,
+            "content": "System Administration Using Puppet',price: '19.99', content: 'Puppet Certification validates the skills of system administrators in administrating system infrastructure and developing basic modules using Puppet.",
             "imageUrl": "/src/assets/courses/course02.png"
          },
         {
