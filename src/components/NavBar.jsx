@@ -1,5 +1,5 @@
 //import logo from '../assets/logo.png';
-import React, { useState, useContext,useRef } from 'react';
+import React, { useState, useContext } from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -103,23 +103,15 @@ function NavBar() {
   //const { carrinho, handleClick, count } = useCarrinho();
 
 
-  const modal = useRef();
+  const [anchorEl, setAnchorEl] = useState(null);
 
-  function handleOpenCartClick() {
-    modal.current.open();
-  }
-
-
-  const [isCartOpen, setIsCartOpen] = useState(false);
-
-  const handleOpenCart = () => {
-    setIsCartOpen(true);
+  const handleOpenCart = (event) => {
+    setAnchorEl(event.currentTarget);
   };
 
   const handleCloseCart = () => {
-    setIsCartOpen(false);
+    setAnchorEl(null);
   };
-
   
  
 
@@ -173,21 +165,22 @@ function NavBar() {
            > 
            
              <IconButton 
+             aria-describedby="cart-modal"
+             variant="contained"
+             onMouseEnter={handleOpenCart}
+             onMouseLeave={handleCloseCart}
              
              
              size="large" aria-label="show 4 itens" color="inherit" >
               
               <Badge
-              aria-describedby="cart-modal"
-              variant="contained"
-              onMouseEnter={handleOpenCartClick}
-              onMouseLeave={handleCloseCart}
+              
 
               badgeContent={carrinho.length} color="error">
                 <ShoppingCartIcon />
               </Badge>
             </IconButton>
-            <CartModal isOpen={isCartOpen}  handleClose={handleCloseCart} />
+            <CartModal anchorEl={anchorEl} handleClose={handleCloseCart} />
             
             <Button sx={{ ...loginStyles, borderRadius: '16px' }} color="inherit">Sign in</Button>
             <Button sx={{ ...loginStyles, borderRadius: '16px' }}  color="inherit"><b>Sign up</b></Button>
