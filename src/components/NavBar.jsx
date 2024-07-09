@@ -128,8 +128,8 @@ function NavBar() {
                           align="center"
                           variant="h6"
                           noWrap
-                          component="div"
-                          sx={{ ...logoStyles,borderRadius: '16px' , flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+                          component={Link} to="/" color="inherit" underline="none"
+                          sx={{ ...logoStyles,borderRadius: '16px' , flexGrow: 1, display: { xs: 'none', sm: 'block' },textDecoration: 'none','&:hover': { textDecoration: 'none' } }}
                           ><b>
                           KIAINFO            
                           </b>
