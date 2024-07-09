@@ -153,9 +153,7 @@ function NavBar() {
                   <Box sx={{ flexGrow: 1 }} />
                   <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                     <MenuItem> 
-                    <Button aria-describedby={id} variant="contained" onClick={handleClick}>
-                        Open Popover
-                    </Button>
+                   
     
                       <IconButton 
                         aria-describedby={id} variant="contained" onClick={handleClick}

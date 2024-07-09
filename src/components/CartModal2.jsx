@@ -31,20 +31,7 @@ const CartModal2 = ({ anchorEl, handleClose,id }) => {
       onMouseLeave={handleClose}
     >
 
-      {/*  
-      <Grid container spacing={2} sx={{ p: 2, maxWidth: 400 }}>
-        <Grid item xs={12}>
-          <Typography variant="h6" gutterBottom>
-            Shopping Cart
-          </Typography>
-        </Grid>
-        <Grid item xs={12}>
-          <Button variant="outlined" color="error" fullWidth onClick={handleClose}>
-            Close Cart
-          </Button>
-        </Grid>
-      </Grid>
-    */}
+     
      <Grid container spacing={2} sx={{ p: 2, maxWidth: 400 }}>
         <Grid item xs={12}>
           <Typography variant="h6" gutterBottom>
