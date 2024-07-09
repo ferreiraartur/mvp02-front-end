@@ -10,17 +10,11 @@ import { Toolbar,CardMedia } from '@mui/material';
 import LeftBar  from '../components/LeftBar';
 import RightBar from '../components/RightBar';
 import { Outlet, Link } from "react-router-dom";
-// 3 - Consumir o contexto
-//import { Contexto } from '../contexts/MyContext';
 import { CartContext } from "../contextAPI/CartContext";
-
-import ListItemText from '@mui/material/ListItemText';
 
 
 
 function Cart(){
-
-    //const [courseList, setCourseList]  = useContext(Contexto);
     
     const { carrinho,adicionarAoCarrinho,getTotal } = useContext(CartContext);
     

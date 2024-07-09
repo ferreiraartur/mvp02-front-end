@@ -1,32 +1,34 @@
-import React, { useState, createContext, useContext } from 'react';
-import NavBar from '../components/NavBar'
-
-
-export const CountTesteContext = createContext();
+import React, { useState } from 'react';
+import { Button, Container, CssBaseline, Typography } from '@mui/material';
+import CartModal2 from '../components/CartModal2';
 
 function PageTeste(){
 
-    const [testeCount, setTesteCount] = useState(0);
-    
+    const [anchorEl, setAnchorEl] = React.useState(null);
 
-    return (
-        <>
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  const open = Boolean(anchorEl);
+  const id = open ? 'simple-popover' : undefined;
+
+  return (
+    <div>
+      <Button aria-describedby={id} variant="contained" onClick={handleClick}>
+        Open Popover
+      </Button>
+    
+        {/* <Typography sx={{ p: 2 }}>The content of the Popover.</Typography> */}
+        <CartModal2 sx={{ p: 2 }}  anchorEl={anchorEl} handleClose={handleClose} id={id}> </CartModal2>
         
-        <CountTesteContext.Provider value={{ testeCount, setTesteCount }}>
-            <div>
-            <p>Você clicou {testeCount} vezes</p>
-      <NavBar testeCount={testeCount}> </NavBar>
-      <button onClick={() => setTesteCount(testeCount + 1)}>
-        Clique aqui
-      </button>
-                
-                <NavBar />
-                
-            </div>
-        </CountTesteContext.Provider>
-        
-        </>
-    )
+      
+    </div>
+  );
 }
 
 export default PageTeste;

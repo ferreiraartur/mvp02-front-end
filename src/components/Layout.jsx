@@ -3,7 +3,6 @@ import NavBar from '../components/NavBar.jsx';
 import Footer from '../components/Footer.jsx';
 import { Container, Grid, Paper, Toolbar } from '@mui/material';
 
-
 function Layout(props){
     return (
     <>
@@ -11,18 +10,13 @@ function Layout(props){
       <Container maxWidth="md" sx={{ marginTop: '64px', height: '150vh' }}>
           <main>
             
+            
 
             {props.children}
             <Footer />
           </main>
        
      </Container>
-     
-        
-          
-
-        
-
 
     </>
     );

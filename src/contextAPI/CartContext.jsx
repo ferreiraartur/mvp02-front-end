@@ -9,7 +9,7 @@ const CartContext = createContext();
 
 const CartProvider = ({ children }) => {
 
-    //const [count, setCount] = useState(0);
+    
     const [carrinho, setCarrinho] = useState([]);
 
     const [anchorEl, setAnchorEl] = useState(null);
@@ -18,7 +18,7 @@ const CartProvider = ({ children }) => {
 
     const handleOpenCart = (event) => {
       console.log(event);
-      console.log('Mouse entrou');
+      console.log('Mouse enter');
       setAnchorEl(event.currentTarget);
     };
 

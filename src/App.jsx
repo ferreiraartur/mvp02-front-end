@@ -1,11 +1,8 @@
-import { useState } from 'react'
-import Layout from './components/Layout.jsx';
+
 import RoutePages from './RoutePages.jsx';
 import Courses from './pages/Courses.jsx';
 import Cart from './pages/Cart.jsx';
-import Checkout from './pages/Checkout.jsx';
 import CartModal from './components/CartModal.jsx'
-
 import { CartProvider } from "./contextAPI/CartContext.jsx"; 
 import NavBar from './components/NavBar.jsx';
 
@@ -19,7 +16,7 @@ function App() {
       <CartProvider>
     
         <RoutePages>
-          <NavBar />
+          
           <Cart />
           <Courses />
           <CartModal />

@@ -5,19 +5,17 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
-import MenuIcon from '@mui/icons-material/Menu';
+import { Button, Container, CssBaseline, Typography } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import Badge from '@mui/material/Badge';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Outlet, Link } from "react-router-dom";
-import CartModal from '../components/CartModal';
+import CartModal2 from '../components/CartModal2';
 
 // 3 - Consumir o contexto
 //import { Contexto } from '../contexts/MyContext';
@@ -99,95 +97,91 @@ const Search = styled('div')(({ theme }) => ({
 function NavBar() {
 
   // 4 - Usar o contexto
-  const { carrinho,handleOpenCart,handleCloseCart,anchorEl,open } = useContext(CartContext);
-  //const { carrinho, handleClick, count } = useCarrinho();
+  const { carrinho,handleOpenCart,handleCloseCart,open } = useContext(CartContext);
+  const id = open ? 'simple-popover' : undefined;
+
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
 
   
   
- 
 
     return (
       <>
-        
-        <Box sx={{ flexGrow: 1}}>
-          <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
-            <Toolbar>
-              <Stack direction="row" alignItems="center">  
+        <React.Fragment>
+          <CssBaseline />
+            <Box sx={{ flexGrow: 1}}>
+              <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
+                <Toolbar>
+                  <Stack direction="row" alignItems="center">  
+                    <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+                      <ThemeProvider theme={theme}>
+                        <Typography
+                          align="center"
+                          variant="h6"
+                          noWrap
+                          component="div"
+                          sx={{ ...logoStyles,borderRadius: '16px' , flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+                          ><b>
+                          KIAINFO            
+                          </b>
+                        </Typography>
+                      </ThemeProvider>
+                    </Box>
+                  </Stack>
+                  <Search >
+                    <SearchIconWrapper>
+                      <SearchIcon />
+                    </SearchIconWrapper>
+                    <StyledInputBase
+                      placeholder="O que gostaria de aprender?"
+                      inputProps={{ 'aria-label': 'search' }}
+                      sx={{
+                        width: '400px'
+                      }}
+                    />
 
-              <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-              <ThemeProvider theme={theme}>
-                <Typography
-                  align="center"
-                  variant="h6"
-                  noWrap
-                  component="div"
-                   
-                  
-                  sx={{ ...logoStyles,borderRadius: '16px' , flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-                ><b>
-                    KIAINFO            
-                  </b>
-                </Typography>
-                </ThemeProvider>
-              </Box>
-          
-          
-            </Stack>
-           <Search >
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            
-            <StyledInputBase
-              
-              placeholder="O que gostaria de aprender?"
-              inputProps={{ 'aria-label': 'search' }}
-              sx={{
-                width: '400px'
-              }}
-              
-            />
+                  </Search>
+                  <Box sx={{ flexGrow: 1 }} />
+                  <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+                    <MenuItem> 
+                    <Button aria-describedby={id} variant="contained" onClick={handleClick}>
+                        Open Popover
+                    </Button>
+    
+                      <IconButton 
+                        aria-describedby={id} variant="contained" onClick={handleClick}
 
-           </Search>
-           <Box sx={{ flexGrow: 1 }} />
-          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-           <MenuItem
-            
-           > 
-           
-             <IconButton 
-             aria-owns={open ? 'mouse-over-popover' : undefined}
-             aria-haspopup="true"
-             aria-describedby="cart-modal"
-             variant="contained"
-             onMouseEnter={handleOpenCart}
-             onMouseLeave={handleCloseCart}
-             
-             
-             size="large" aria-label="show 4 itens" color="inherit" >
-              
-              <Badge
-              
 
-              badgeContent={carrinho.length} color="error">
-                <ShoppingCartIcon />
-              </Badge>
-            </IconButton>
-            <CartModal anchorEl={anchorEl} handleClose={handleCloseCart} />
-            
-            <Button sx={{ ...loginStyles, borderRadius: '16px' }} color="inherit">Sign in</Button>
-            <Button sx={{ ...loginStyles, borderRadius: '16px' }}  color="inherit"><b>Sign up</b></Button>
+                        size="large" aria-label="show 4 itens" color="inherit" >
+              
+                        <Badge            
+                          badgeContent={carrinho.length} color="error">
+                          <ShoppingCartIcon />
+                        </Badge>
+                      </IconButton>
+                      <CartModal2 sx={{ p: 2 }}  anchorEl={anchorEl} handleClose={handleClose} id={id}> </CartModal2>
+                      <Button sx={{ ...loginStyles, borderRadius: '16px' }} color="inherit">Sign in</Button>
+                      <Button sx={{ ...loginStyles, borderRadius: '16px' }}  color="inherit"><b>Sign up</b></Button>
             
         
-           </MenuItem>
-           </Box>
+                    </MenuItem>
+                  </Box>
       
-            </Toolbar>
-          </AppBar>
+                </Toolbar>
+              </AppBar>
           
-          <Outlet /> 
-        </Box>
+                <Outlet /> 
+            </Box>
+        </React.Fragment>
 
        
         </>

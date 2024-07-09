@@ -29,62 +29,18 @@ function Courses(){
 
   const { carrinho,adicionarAoCarrinho } = useContext(CartContext);
 
- // const carrinho = useMyContext();
-  //const { handleClick}  = useMyContext();
 
-  //const calcularTotal = () => {
-   // return carrinho.reduce((total, course) => total + course.price, 0);
- // };
-
- // const [count, setCount] = useState(0);
-  const [disabled, setDisabled] = useState(false);
+  //const [disabled, setDisabled] = useState(false);
   const [courses, setCourses] = useState([]);
-
- // const [carrinho, setCarrinho] = useState([]);
-
-  //const adicionarAoCarrinho = (course) => {
- //   setCarrinho([...carrinho, course]);
-    //console.log ("teste123" + course.title);
-    //console.log ("teste124" + carrinho.title);
-
-  //  carrinho.map((course) => (
-  //    console.log("teste1234" + course.title)
-  //  ))
-
- //   handleClick();
-  
- //};
-
-  
 
   useEffect(() => {
     setCourses(dados.courses)
   }, []);
 
 
-
-
- // const handleClick = () => {
-    // Lógica para manipular o clique do botão
-  //  console.log('Botão clicado!');
-
-  //  setCount(setCount => count + 1)
-    //setDisabled(true);
-    
- // };
-
   return (
     <>
-      {/**
-      <section>
-        <Contexto.Provider value={{count, carrinho }}>
-            {children}
-            
-        </Contexto.Provider>
-
-        
-      </section>
-       */}
+     
 
     <Grid container spacing={2}>
       {/* leftBar (Drawer esquerdo) */}
