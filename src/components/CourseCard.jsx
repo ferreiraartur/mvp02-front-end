@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardContent, Typography, CardMedia,CardActionArea, CardActions, Button, Grid, Box} from '@mui/material';
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import {  HashLink as Link } from 'react-router-hash-link';
 
 const CourseCards = ({ course }) => {
   return (
@@ -34,7 +35,7 @@ const CourseCards = ({ course }) => {
 
       <CardActionArea>  
       
-        <Button component={Link} to={"/courses/"+course.name} size="small" color="primary"
+        <Button component={Link} to={"/courses/"+course.name+"/#top"} size="small" color="primary"
           sx={{ width: '100%', textAlign: 'center' }}
         >
             Mais detalhes

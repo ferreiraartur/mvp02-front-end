@@ -34,7 +34,7 @@ function Courses(){
 
   return (
     <>
-     
+     <div id="top">
      <Toolbar></Toolbar>
     <Grid container spacing={2}>
       {/* leftBar (Drawer esquerdo) */}
@@ -100,6 +100,7 @@ function Courses(){
       {/* rightBar (Drawer direito) */}
       <RightBar />
     </Grid>
+    </div>
     </>
   );
   

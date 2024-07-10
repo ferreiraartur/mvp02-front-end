@@ -31,7 +31,8 @@ function CourseList(){
 
     return (
         <>
-         
+        <div>
+         <h1 id="top"></h1>
         <Toolbar></Toolbar>
         <Grid container spacing={2}>
           {/* leftBar (Drawer esquerdo) */}
@@ -97,8 +98,12 @@ function CourseList(){
           {/* rightBar (Drawer direito) */}
           <RightBar />
         </Grid>
+        </div>
+       
         </>
+        
       );
+      
       
     };
 
