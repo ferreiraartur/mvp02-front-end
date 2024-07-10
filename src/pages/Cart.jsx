@@ -16,7 +16,14 @@ import { CartContext } from "../contextAPI/CartContext";
 
 function Cart(){
     
-    const { carrinho,adicionarAoCarrinho,getTotal } = useContext(CartContext);
+    const { carrinho,setCarrinho, adicionarAoCarrinho,getTotal } = useContext(CartContext);
+
+
+
+    const handleDeleteItem = (id) => {
+        const updatedItems = carrinho.filter(item => item.id !== id);
+        setCarrinho(updatedItems);
+    };
     
     
     const handleClick = () => {
@@ -60,7 +67,7 @@ function Cart(){
                                         
 
                                         <Grid item xs={12} container justifyContent="flex-end">  
-                                            <Button  onClick={handleClick} variant="contained" color="primary" sx={{ marginLeft: 'auto' }}>
+                                            <Button  onClick={() => handleDeleteItem(course.id)} variant="contained" color="primary" sx={{ marginLeft: 'auto' }}>
                                                 remover
                                             </Button>
                                         </Grid>

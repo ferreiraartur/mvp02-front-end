@@ -6,7 +6,12 @@ import {  Link } from "react-router-dom";
 const CartModal2 = ({ anchorEl, handleClose,id }) => {
   const open = Boolean(anchorEl);
 
-  const { carrinho,getTotal} = useContext(CartContext);
+  const { carrinho,setCarrinho, getTotal} = useContext(CartContext);
+
+  const handleDeleteItem = (id) => {
+    const updatedItems = carrinho.filter(item => item.id !== id);
+    setCarrinho(updatedItems);
+  };
 
 
 
