@@ -6,7 +6,7 @@ const CourseCards = ({ course }) => {
   return (
    <div style={{ padding: 15 }} >
     
-    <Card style={{ width: 300, height: 300 }} sx={{   borderRadius: 5}}>
+    <Card style={{ width: 300, height: 350 }} sx={{   borderRadius: 5}}>
     
       <CardMedia
         height= "160" 
@@ -17,10 +17,15 @@ const CourseCards = ({ course }) => {
       <hr></hr>
       
       <CardContent>
-        <Typography variant="h5" component="div">
+        <Typography variant="h6" component="div"
+          sx={{ width: '100%', textAlign: 'center' }}
+        >
           {course.name}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        
+        <Typography variant="h10" color="text.secondary"
+          sx={{ width: '100%', textAlign: 'center' }}
+        >
           {course.description}
           
         </Typography>
@@ -29,8 +34,10 @@ const CourseCards = ({ course }) => {
 
       <CardActionArea>  
       
-        <Button component={Link} to={"/courses/"+course.name} size="small" color="primary">
-          Mais detalhes
+        <Button component={Link} to={"/courses/"+course.name} size="small" color="primary"
+          sx={{ width: '100%', textAlign: 'center' }}
+        >
+            Mais detalhes
         </Button>
       
       </CardActionArea>

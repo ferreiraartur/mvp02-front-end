@@ -5,11 +5,6 @@ import './BannerSlider.css'
 import { ArrowForward } from '@mui/icons-material';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
-
-
-
-
-
 const BannerSlider = () => {
 
     

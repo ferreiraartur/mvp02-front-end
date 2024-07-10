@@ -10,7 +10,7 @@ const courses = [
     {
       id: 1,
       name: 'DevOps',
-      description: 'DevOps t',
+      description: 'Automação, CI/CD, containers orquestração, infraestrutura como código e monitoramento.',
       imageUrl: '/src/assets/cards/card01.png',
       
       
@@ -18,30 +18,30 @@ const courses = [
     {
       id: 2,
       name: 'Linux',
-      description: 'Linux t',
+      description: 'Essencial para quem deseja dominar um dos S.O. mais populares do mundo.',
       imageUrl: '/src/assets/cards/card02.png',
     },
     {
       id:3,
       name: 'Cloud',
-      description: 'Cloud t',
+      description: 'Essencial para profissionais de T.I. interessados nos conceitos e práticas da computação em nuvem. ',
       imageUrl: '/src/assets/cards/card03.png',
     },
     {
       id: 4,
       name: 'Segurança',
-      description: 'Segurança t',
+      description: 'Fundamental para profissionais que interessados práticas avançadas contra ameaças cibernéticas.',
       imageUrl: '/src/assets/cards/card04.png',
     },
     {
       id: 5,
       name: 'Java',
-      description: 'Java t',
+      description: 'Fundamental para quem deseja aprender uma das linguagens de programação mais populares.',
       imageUrl: '/src/assets/cards/card05.png',
     },
     { id: 6,
       name: 'Python',
-      description: 'Python t',
+      description: 'Fundamental para quem deseja aprender uma das linguagens de programação mais populares.',
       imageUrl: '/src/assets/cards/card06.png',
     },
     // Adicione mais cursos conforme necessário

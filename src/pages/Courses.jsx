@@ -16,14 +16,8 @@ import dados from '../dados.json'
 import Cart from '../pages/Cart'
 
 // 3 - Consumir o contexto
-//import { Contexto } from '../contexts/MyContext';
 import { CartContext } from "../contextAPI/CartContext";
 
-// 1 - Criar um contexto
-//export const Contexto = createContext();
-
-
-  
 
 function Courses(){
 
