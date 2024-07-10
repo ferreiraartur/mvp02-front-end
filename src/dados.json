@@ -6,7 +6,7 @@
             "title": "Docker Certified Associate",
             "price": 29.99,
             "content": "Um curso de Docker é essencial para desenvolvedores e operadores de sistemas que desejam modernizar seus processos de desenvolvimento e implantação de software. ",
-            "imageUrl": "/src/assets/courses/course01.png"
+            "imageUrl": "/src/assets/courses/docker.png"
         },
         { 
             "id": 2, 
@@ -14,7 +14,7 @@
             "title": "Puppet Expert",
             "price": 19.99,
             "content": "Um curso de Puppet é essencial para profissionais de DevOps, administradores de sistemas e engenheiros de infraestrutura que desejam adotar práticas modernas de automação e gerenciamento de configuração.",
-            "imageUrl": "/src/assets/courses/course02.png"
+            "imageUrl": "/src/assets/courses/puppet.png"
          },
         {
             "id": 3,
@@ -22,7 +22,7 @@
             "title": "System Administration Using Ansible",
             "price": 19.99,
             "content": "Um curso de Ansible é essencial para profissionais de DevOps, administradores de sistemas e engenheiros de infraestrutura que desejam adotar práticas modernas de automação e gerenciamento de configuração.",
-            "imageUrl": "/src/assets/courses/course03.png"
+            "imageUrl": "/src/assets/courses/ansible.png"
         },
         {
             "id": 4,
@@ -30,7 +30,7 @@
             "title": "Curso Linux Administration | Certificação LPI 1",
             "content": "O curso de Administrador de Sistemas Linux prepara os participantes não apenas para dominarem as técnicas de gerenciamento de sistemas Linux, mas também para se destacarem em um mercado de trabalho competitivo e em constante evolução.",
             "price": 19.99,
-            "imageUrl": "/src/assets/courses/course01.png"
+            "imageUrl": "/src/assets/courses/linux.png"
         },
         { 
             "id": 5,
@@ -38,7 +38,7 @@
             "title": "Curso Linux Network",
             "content": "O curso de Linux Network capacita os participantes com habilidades avançadas para configurar e gerenciar redes complexas em ambientes Linux.",
             "price": 19.99,
-            "imageUrl": "/src/assets/courses/course01.png"
+            "imageUrl": "/src/assets/courses/linux.png"
         },
         { 
             "id": 6,
@@ -46,7 +46,7 @@
             "title": "Linux Expert",
             "content": "Um curso de Linux Expert é voltado para profissionais que desejam aprofundar seus conhecimentos em sistemas Linux, abrangendo desde aspectos avançados de administração até tópicos especializados em segurança, redes, virtualização e automação",
             "price": 19.99,
-            "imageUrl": "/src/assets/courses/course01.png"
+            "imageUrl": "/src/assets/courses/linux.png"
         },
         { 
             "id": 7, 
@@ -54,7 +54,7 @@
             "title": "Cloud Practitioner",
             "content": "O curso de Cloud Practitioner é ideal para profissionais que buscam iniciar sua jornada na computação em nuvem, fornecendo uma base sólida em conceitos essenciais, serviços de nuvem populares e práticas recomendadas.", 
             "price": 19.99,
-            "imageUrl": "/src/assets/courses/course01.png"
+            "imageUrl": "/src/assets/courses/cloud.png"
         },
         {
             "id": 8,
@@ -62,7 +62,7 @@
             "title": "Solutions Architect - Associate",
             "content": "Prepare-se para a prova AWS Certified Solutions Architect - Associate e torne-se um profissional com título de arquiteto de soluções AWS",
             "price": "19.99",
-            "imageUrl": "/src/assets/courses/course01.png"
+            "imageUrl": "/src/assets/courses/cloud.png"
         },
         { 
             "id": 9,
@@ -70,7 +70,7 @@
             "title": "Solutions Architect - Professional", 
             "content": "Prepare-se para a prova AWS Certified Solutions Architect - Professional e torne-se um profissional com título de arquiteto de soluções AWS", 
             "price": 19.99,
-            "imageUrl": "/src/assets/courses/course01.png"
+            "imageUrl": "/src/assets/courses/cloud.png"
          },
          { 
             "id": 10,
@@ -78,7 +78,7 @@
             "title": "Cibersegurança 1",
             "content": "Proteja suas aplicações de diferentes ataques e ameaças!",
             "price": 19.99,
-            "imageUrl": "/src/assets/courses/course01.png"
+            "imageUrl": "/src/assets/courses/cyber.png"
         },
         { 
             "id": 11,
@@ -86,7 +86,7 @@
             "title": "Cibersegurança 2", 
             "content": "Proteja suas aplicações de diferentes ataques e ameaças!",
             "price": 19.99,
-            "imageUrl": "/src/assets/courses/course01.png"
+            "imageUrl": "/src/assets/courses/cyber.png"
         },
         { 
             "id": 12,
@@ -94,7 +94,7 @@
             "title": "Cibersegurança 3",
             "content": "Proteja suas aplicações de diferentes ataques e ameaças!",
             "price": 19.99,
-            "imageUrl": "/src/assets/courses/course01.png"
+            "imageUrl": "/src/assets/courses/cyber.png"
         },
         {
             "id": 13,
@@ -102,7 +102,7 @@
             "title": "Java básico",
             "content": "Conheça os fundamentos do Java, uma das linguagens de programação mais populares do mercado!",
             "price": 19.99,
-            "imageUrl": "/src/assets/courses/course13.png"
+            "imageUrl": "/src/assets/courses/java.png"
         },
         {
             "id": 14,
@@ -110,7 +110,7 @@
             "title": "Java Avançado",
             "content": "Java é uma grande plataforma presente em todo lugar: de corporações à bancos e governo. Desenvolva aplicações robustas com um back-end e construa APIs usando Java, Spring Boot, Hibernate.",
             "price": "19.99",
-            "imageUrl": "/src/assets/courses/course13.png"
+            "imageUrl": "/src/assets/courses/java.png"
         },
         {
             "id": 15,
@@ -118,7 +118,7 @@
             "title": "Python básico", 
             "content": "Conceitos básicos de python",
             "price": 19.99,
-            "imageUrl": "/src/assets/courses/course15.png"
+            "imageUrl": "/src/assets/courses/python.png"
         },
         {
             "id": 16,
@@ -126,7 +126,7 @@
             "title": "Python avançado",
             "content": "Formação Aprenda a programar em Python com Orientação a Objetos.", 
             "price": 19.99, 
-            "imageUrl": "/src/assets/courses/course15.png"
+            "imageUrl": "/src/assets/courses/python.png"
         }
   ]
  }
