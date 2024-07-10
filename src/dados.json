@@ -5,7 +5,7 @@
             "category": "DevOps",
             "title": "Docker Certified Associate",
             "price": 29.99,
-            "content": "This Docker training course is intended for the learners who is preparing for the Docker Certified Associate (DCA) certification exam.",
+            "content": "Um curso de Docker é essencial para desenvolvedores e operadores de sistemas que desejam modernizar seus processos de desenvolvimento e implantação de software. ",
             "imageUrl": "/src/assets/courses/course01.png"
         },
         { 
@@ -13,7 +13,7 @@
             "category": "DevOps",
             "title": "Puppet Expert",
             "price": 19.99,
-            "content": "System Administration Using Puppet',price: '19.99', content: 'Puppet Certification validates the skills of system administrators in administrating system infrastructure and developing basic modules using Puppet.",
+            "content": "Um curso de Puppet é essencial para profissionais de DevOps, administradores de sistemas e engenheiros de infraestrutura que desejam adotar práticas modernas de automação e gerenciamento de configuração.",
             "imageUrl": "/src/assets/courses/course02.png"
          },
         {
@@ -21,120 +21,112 @@
             "category": "DevOps",
             "title": "System Administration Using Ansible",
             "price": 19.99,
-            "content": "Learn how to use Ansible to automate management and deployment of the systems in an enterprise environment by simply taking this course.",
+            "content": "Um curso de Ansible é essencial para profissionais de DevOps, administradores de sistemas e engenheiros de infraestrutura que desejam adotar práticas modernas de automação e gerenciamento de configuração.",
             "imageUrl": "/src/assets/courses/course03.png"
         },
         {
             "id": 4,
             "category": "Linux",
-            "title": "Card 4",
-            "content": "Conteúdo do Card 4",
+            "title": "Curso Linux Administration | Certificação LPI 1",
+            "content": "O curso de Administrador de Sistemas Linux prepara os participantes não apenas para dominarem as técnicas de gerenciamento de sistemas Linux, mas também para se destacarem em um mercado de trabalho competitivo e em constante evolução.",
             "price": 19.99,
             "imageUrl": "/src/assets/courses/course01.png"
         },
         { 
             "id": 5,
             "category": "Linux",
-            "title": "Card 5",
-            "content": "Conteúdo do Card 5",
+            "title": "Curso Linux Network",
+            "content": "O curso de Linux Network capacita os participantes com habilidades avançadas para configurar e gerenciar redes complexas em ambientes Linux.",
             "price": 19.99,
             "imageUrl": "/src/assets/courses/course01.png"
         },
         { 
             "id": 6,
             "category": "Linux",
-            "title": "Card 6",
-            "content": "Conteúdo do Card 6",
+            "title": "Linux Expert",
+            "content": "Um curso de Linux Expert é voltado para profissionais que desejam aprofundar seus conhecimentos em sistemas Linux, abrangendo desde aspectos avançados de administração até tópicos especializados em segurança, redes, virtualização e automação",
             "price": 19.99,
             "imageUrl": "/src/assets/courses/course01.png"
         },
         { 
             "id": 7, 
             "category": "Cloud",
-            "title": "Card 7",
-            "content": "Conteúdo do Card 7", 
+            "title": "Cloud Practitioner",
+            "content": "O curso de Cloud Practitioner é ideal para profissionais que buscam iniciar sua jornada na computação em nuvem, fornecendo uma base sólida em conceitos essenciais, serviços de nuvem populares e práticas recomendadas.", 
             "price": 19.99,
             "imageUrl": "/src/assets/courses/course01.png"
         },
         {
             "id": 8,
             "category": "Cloud",
-            "title": "Card 8",
-            "content": "Conteúdo do Card 8",
+            "title": "Solutions Architect - Associate",
+            "content": "Prepare-se para a prova AWS Certified Solutions Architect - Associate e torne-se um profissional com título de arquiteto de soluções AWS",
             "price": "19.99",
             "imageUrl": "/src/assets/courses/course01.png"
         },
         { 
             "id": 9,
             "category": "Cloud", 
-            "title": "Card 9", 
-            "content": "Conteúdo do Card 9", 
+            "title": "Solutions Architect - Professional", 
+            "content": "Prepare-se para a prova AWS Certified Solutions Architect - Professional e torne-se um profissional com título de arquiteto de soluções AWS", 
             "price": 19.99,
             "imageUrl": "/src/assets/courses/course01.png"
          },
          { 
             "id": 10,
             "category": "Segurança",
-            "title": "Card 10",
-            "content": "Conteúdo do Card 10",
+            "title": "Cibersegurança 1",
+            "content": "Proteja suas aplicações de diferentes ataques e ameaças!",
             "price": 19.99,
             "imageUrl": "/src/assets/courses/course01.png"
         },
         { 
             "id": 11,
             "category": "Segurança",
-            "title": "Card 11", 
-            "content": "Conteúdo do Card 11",
+            "title": "Cibersegurança 2", 
+            "content": "Proteja suas aplicações de diferentes ataques e ameaças!",
             "price": 19.99,
             "imageUrl": "/src/assets/courses/course01.png"
         },
         { 
             "id": 12,
             "category": "Segurança",
-            "title": "Card 12",
-            "content": "Conteúdo do Card 12",
+            "title": "Cibersegurança 3",
+            "content": "Proteja suas aplicações de diferentes ataques e ameaças!",
             "price": 19.99,
             "imageUrl": "/src/assets/courses/course01.png"
         },
         {
             "id": 13,
             "category": "Java",
-            "title": "Card 13",
-            "content": "Conteúdo do Card 13",
+            "title": "Java básico",
+            "content": "Conheça os fundamentos do Java, uma das linguagens de programação mais populares do mercado!",
             "price": 19.99,
-            "imageUrl": "/src/assets/courses/course01.png"
+            "imageUrl": "/src/assets/courses/course13.png"
         },
         {
             "id": 14,
             "category": "Java",
-            "title": "Card 14",
-            "content": "Conteúdo do Card 14",
+            "title": "Java Avançado",
+            "content": "Java é uma grande plataforma presente em todo lugar: de corporações à bancos e governo. Desenvolva aplicações robustas com um back-end e construa APIs usando Java, Spring Boot, Hibernate.",
             "price": "19.99",
-            "imageUrl": "/src/assets/courses/course01.png"
+            "imageUrl": "/src/assets/courses/course13.png"
         },
         {
             "id": 15,
-            "category": "Java",
-            "title": "Card 15",
-            "content": "Conteúdo do Card 15", 
+            "category": "Python",
+            "title": "Python básico", 
+            "content": "Conceitos básicos de python",
             "price": 19.99,
-            "imageUrl": "/src/assets/courses/course01.png"
+            "imageUrl": "/src/assets/courses/course15.png"
         },
         {
-            "id": 17,
+            "id": 16,
             "category": "Python",
-            "title": "Card 17", 
-            "content": "Conteúdo do Card 17",
-            "price": 19.99,
-            "imageUrl": "/src/assets/courses/course01.png"
-        },
-        {
-            "id": 18,
-            "category": "Python",
-            "title": "Card 18",
-            "content": "Conteúdo do Card 18", 
+            "title": "Python avançado",
+            "content": "Formação Aprenda a programar em Python com Orientação a Objetos.", 
             "price": 19.99, 
-            "imageUrl": "/src/assets/courses/course01.png"
+            "imageUrl": "/src/assets/courses/course15.png"
         }
   ]
  }

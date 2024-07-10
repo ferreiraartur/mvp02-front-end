@@ -16,6 +16,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Outlet, Link } from "react-router-dom";
 import CartModal2 from '../components/CartModal2';
+import CartModal3 from '../components/CartModal3';
 
 // 3 - Consumir o contexto
 //import { Contexto } from '../contexts/MyContext';
@@ -102,6 +103,12 @@ function NavBar() {
 
   const [anchorEl, setAnchorEl] = React.useState(null);
 
+  const [openModal3, setOpenModal3] = React.useState(null);
+
+  const handleClick3 = (event) => {
+    setOpenModal3(event.currentTarget);
+  };
+
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -111,7 +118,9 @@ function NavBar() {
   };
 
 
-  
+  function isEmpty(carrinho){
+    return carrinho.length === 0;
+  }
   
 
     return (
@@ -152,9 +161,10 @@ function NavBar() {
                   </Search>
                   <Box sx={{ flexGrow: 1 }} />
                   <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-                    <MenuItem> 
-                   
-    
+                    
+                    <MenuItem>
+                      
+
                       <IconButton 
                         aria-describedby={id} variant="contained" onClick={handleClick}
 
@@ -167,11 +177,14 @@ function NavBar() {
                         </Badge>
                       </IconButton>
                       <CartModal2 sx={{ p: 2 }}  anchorEl={anchorEl} handleClose={handleClose} id={id}> </CartModal2>
+
+
                       <Button sx={{ ...loginStyles, borderRadius: '16px' }} color="inherit">Sign in</Button>
                       <Button sx={{ ...loginStyles, borderRadius: '16px' }}  color="inherit"><b>Sign up</b></Button>
             
         
                     </MenuItem>
+                   
                   </Box>
       
                 </Toolbar>
