@@ -41,7 +41,7 @@ function Courses(){
   return (
     <>
      
-
+     <Toolbar></Toolbar>
     <Grid container spacing={2}>
       {/* leftBar (Drawer esquerdo) */}
       <LeftBar />

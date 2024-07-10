@@ -74,7 +74,7 @@
          },
          { 
             "id": 10,
-            "category": "Seguranca",
+            "category": "Segurança",
             "title": "Card 10",
             "content": "Conteúdo do Card 10",
             "price": 19.99,
@@ -82,7 +82,7 @@
         },
         { 
             "id": 11,
-            "category": "Seguranca",
+            "category": "Segurança",
             "title": "Card 11", 
             "content": "Conteúdo do Card 11",
             "price": 19.99,
@@ -90,7 +90,7 @@
         },
         { 
             "id": 12,
-            "category": "Seguranca",
+            "category": "Segurança",
             "title": "Card 12",
             "content": "Conteúdo do Card 12",
             "price": 19.99,

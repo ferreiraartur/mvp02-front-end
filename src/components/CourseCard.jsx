@@ -22,13 +22,14 @@ const CourseCards = ({ course }) => {
         </Typography>
         <Typography variant="body2" color="text.secondary">
           {course.description}
+          
         </Typography>
         
       </CardContent>
 
       <CardActionArea>  
       
-        <Button component={Link} to="/courses" size="small" color="primary">
+        <Button component={Link} to={"/courses/"+course.name} size="small" color="primary">
           Mais detalhes
         </Button>
       
