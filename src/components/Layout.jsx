@@ -6,15 +6,15 @@ import { Container} from '@mui/material';
 function Layout(props){
     return (
     <>
-        <NavBar />
+      <NavBar />
       <Container maxWidth="md" sx={{ marginTop: '64px', height: '150vh' }}>
-          <main>
+        <main>
             
             
 
-            {props.children}
-            <Footer />
-          </main>
+        {props.children}
+        <Footer />
+        </main>
        
      </Container>
 

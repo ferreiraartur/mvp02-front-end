@@ -1,4 +1,4 @@
-//import logo from '../assets/logo.png';
+
 import React, { useState, useContext } from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
@@ -6,7 +6,7 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import InputBase from '@mui/material/InputBase';
-import { Button, Container, CssBaseline, Typography } from '@mui/material';
+import { Button, CssBaseline, Typography } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import Stack from '@mui/material/Stack';
 import MenuItem from '@mui/material/MenuItem';
@@ -18,8 +18,7 @@ import { Outlet, Link } from "react-router-dom";
 import CartModal2 from '../components/CartModal2';
 import CartModal3 from '../components/CartModal3';
 
-// 3 - Consumir o contexto
-//import { Contexto } from '../contexts/MyContext';
+
 import { CartContext } from "../contextAPI/CartContext";
 
 const theme = createTheme({
@@ -117,10 +116,22 @@ function NavBar() {
     setAnchorEl(null);
   };
 
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const handleChange = (event) => {
+    console.log (event);
+    const value = event.target.value;
+    console.log(value);
+    setSearchTerm(value);
+    //onChange(value);
+  };
+
 
   function isEmpty(carrinho){
     return carrinho.length === 0;
   }
+
+  
   
 
     return (
@@ -146,6 +157,7 @@ function NavBar() {
                       </ThemeProvider>
                     </Box>
                   </Stack>
+
                   <Search >
                     <SearchIconWrapper>
                       <SearchIcon />
@@ -153,12 +165,14 @@ function NavBar() {
                     <StyledInputBase
                       placeholder="O que gostaria de aprender?"
                       inputProps={{ 'aria-label': 'search' }}
+                      onChange={handleChange}
                       sx={{
                         width: '400px'
                       }}
                     />
 
                   </Search>
+
                   <Box sx={{ flexGrow: 1 }} />
                   <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                     

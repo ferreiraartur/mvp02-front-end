@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import Banner from './Banner.jsx';
-import {Box, IconButton} from '@mui/material';
+import { IconButton} from '@mui/material';
 import './BannerSlider.css'
 import { ArrowForward } from '@mui/icons-material';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
