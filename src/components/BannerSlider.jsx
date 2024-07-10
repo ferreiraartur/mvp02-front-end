@@ -1,10 +1,18 @@
 import React, {useState, useEffect} from "react";
 import Banner from './Banner.jsx';
-import Box from '@mui/material/Box';
+import {Box, IconButton} from '@mui/material';
 import './BannerSlider.css'
+import { ArrowForward } from '@mui/icons-material';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+
+
+
+
 
 
 const BannerSlider = () => {
+
+    
 
     const banners = [
         'src/assets/banner1.png',
@@ -32,13 +40,40 @@ const BannerSlider = () => {
 
     return (
         
-        <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+       
+
+
+
+        
         <div className="banner-slider">
             <button onClick={prevBanner}>Previous</button>
+
             <Banner banner={banners[currentBanner]} />
-            <button onClick={nextBanner}>Next</button>
+            
+
+               
+                <button  onClick={nextBanner}>Next</button>
+                
+                <IconButton
+        aria-label="arrow-forward"
+        sx={{
+          color: '#FFFFFF', // Cor do ícone da seta
+          backgroundColor: '#FFDD00', // Cor do botão de fundo amarelo
+          borderRadius: '50%', // Botão redondo (círculo)
+          padding: '8px', // Espaçamento interno
+          '&:hover': {
+            backgroundColor: '#d3d3d3', // Cor do botão de fundo amarelo escuro ao passar o mouse
+          },
+        }}
+      >
+        <KeyboardArrowRightIcon sx={{ fontSize: 32 }} />
+      </IconButton>
+            
+           
+           
+            
         </div>
-        </Box>
+       
     );   
 };
 

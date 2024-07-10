@@ -51,7 +51,7 @@ function Home(){
 
     return (
         <>
-            
+            <Toolbar></Toolbar>
             <BannerSlider />
             <Toolbar />
             <Sentence />

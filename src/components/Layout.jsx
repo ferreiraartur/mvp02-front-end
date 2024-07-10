@@ -1,7 +1,7 @@
 import '../App.css'
 import NavBar from '../components/NavBar.jsx';
 import Footer from '../components/Footer.jsx';
-import { Container, Grid, Paper, Toolbar } from '@mui/material';
+import { Container} from '@mui/material';
 
 function Layout(props){
     return (
