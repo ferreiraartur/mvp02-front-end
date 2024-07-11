@@ -9,9 +9,10 @@ import ListItem from '@mui/material/ListItem';
 import { Toolbar,CardMedia } from '@mui/material';
 import LeftBar  from '../components/LeftBar';
 import RightBar from '../components/RightBar';
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import { CartContext } from "../contextAPI/CartContext";
 import BeautifulButton from '../components/BeautifulButton'
+import {  HashLink as Link } from 'react-router-hash-link';
 
 
 
