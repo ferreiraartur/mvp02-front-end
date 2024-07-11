@@ -105,9 +105,9 @@ function Cart(){
                                             Total: ${getTotal()} 
                                         </Typography>
                                         
-
+                                        
                                         <Grid item xs={12} container justifyContent="flex-end">  
-                                            <Button  size="small" component={Link} to="/checkout" onClick={handleClick} variant="contained" color="primary" sx={{ marginLeft: 'auto' }}>
+                                            <Button  size="small" component={Link} to="/checkout/#top" onClick={handleClick} variant="contained" color="primary" sx={{ marginLeft: 'auto' }}>
                                                 Ir para pagamento
                                             </Button>
                                         </Grid>

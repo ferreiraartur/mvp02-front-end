@@ -114,6 +114,8 @@ function Checkout(){
       };
 
     return (
+        <div>
+         <h1 id="top"></h1>
         <Grid container spacing={2}>
             <LeftBar />
 
@@ -293,6 +295,7 @@ function Checkout(){
 
             <RightBar />
         </Grid>
+        </div>
 
     )
 }
