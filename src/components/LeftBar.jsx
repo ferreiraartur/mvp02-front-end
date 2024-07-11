@@ -14,10 +14,10 @@ function LeftBar(){
           variant="permanent"
           anchor="left"
           sx={{
-            width: 240,
+            width: 150,
             flexShrink: 0,
             '& .MuiDrawer-paper': {
-              width: 240,
+              width: 150,
               boxSizing: 'border-box',
             },
           }}

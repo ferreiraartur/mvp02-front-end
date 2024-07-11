@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Container, CssBaseline, Typography } from '@mui/material';
+import { Button, Container, CssBaseline, Toolbar, Typography } from '@mui/material';
 import CartModal2 from '../components/CartModal2';
 
 function PageTeste(){
@@ -19,6 +19,9 @@ function PageTeste(){
 
   return (
     <div>
+
+      <Toolbar> </Toolbar>
+      <Toolbar> </Toolbar>
       <Button aria-describedby={id} variant="contained" onClick={handleClick}>
         Open Popover
       </Button>
