@@ -41,28 +41,17 @@ const BannerSlider = () => {
 
         
         <div className="banner-slider">
-            <button onClick={prevBanner}>Previous</button>
+           {/* <button onClick={prevBanner}>Previous</button>
+           */}
 
             <Banner banner={banners[currentBanner]} />
             
 
-               
+               {/*
                 <button  onClick={nextBanner}>Next</button>
+    */}
                 
-                <IconButton
-        aria-label="arrow-forward"
-        sx={{
-          color: '#FFFFFF', // Cor do ícone da seta
-          backgroundColor: '#FFDD00', // Cor do botão de fundo amarelo
-          borderRadius: '50%', // Botão redondo (círculo)
-          padding: '8px', // Espaçamento interno
-          '&:hover': {
-            backgroundColor: '#d3d3d3', // Cor do botão de fundo amarelo escuro ao passar o mouse
-          },
-        }}
-      >
-        <KeyboardArrowRightIcon sx={{ fontSize: 32 }} />
-      </IconButton>
+                
             
            
            

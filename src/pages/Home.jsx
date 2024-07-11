@@ -30,7 +30,7 @@ const courses = [
     {
       id: 4,
       name: 'Segurança',
-      description: 'Fundamental para profissionais que interessados práticas avançadas contra ameaças cibernéticas.',
+      description: 'Fundamental para profissionais interessados em práticas avançadas contra ameaças cibernéticas.',
       imageUrl: '/src/assets/cards/card04.png',
     },
     {

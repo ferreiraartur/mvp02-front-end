@@ -181,7 +181,7 @@ function Checkout(){
                                     helperText={formErrors.cvv ? 'Campo obrigatório' : ''}
                                 />
                             </FormControl>
-                            <Typography variant="h7" component="div">We do not store your credit card information.</Typography>
+                            <Typography variant="h7" component="div">Não armazenamos as informações do seu cartão de crédito.</Typography>
 
                         </Grid>
                     </form>
