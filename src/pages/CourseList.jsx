@@ -12,6 +12,7 @@ import { Toolbar,CardMedia } from '@mui/material';
 import LeftBar  from '../components/LeftBar';
 import RightBar from '../components/RightBar'
 import dados from '../dados.json'
+import BeautifulButton from '../components/BeautifulButton'
 
 
 function CourseList(){
@@ -77,11 +78,14 @@ function CourseList(){
                       <Grid item xs={12} container justifyContent="flex-end">
                           
                       
-                          
-                          <Button onClick={() => adicionarAoCarrinho(course)} variant="contained" color="primary" sx={{ marginLeft: 'auto' }}>
-                           Comprar
-                           
-                          </Button>
+                        
+                        <BeautifulButton onClick={() => adicionarAoCarrinho(course)} >
+                      
+                            Comprar
+                        </BeautifulButton>
+
+
+
                           {console.log("testando" +carrinho)}
                       </Grid>
                      </CardContent>

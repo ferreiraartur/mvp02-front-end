@@ -14,6 +14,7 @@ import RightBar from '../components/RightBar'
 import NavBar from  '../components/NavBar'
 import dados from '../dados.json'
 import Cart from '../pages/Cart'
+import BeautifulButton from '../components/BeautifulButton'
 
 // 3 - Consumir o contexto
 import { CartContext } from "../contextAPI/CartContext";
@@ -79,11 +80,18 @@ function Courses(){
                   <Grid item xs={12} container justifyContent="flex-end">
                       
                   
-                      
+                      {/*
                       <Button onClick={() => adicionarAoCarrinho(course)} variant="contained" color="primary" sx={{ marginLeft: 'auto' }}>
                        Comprar
-                       
                       </Button>
+          */}
+                      <BeautifulButton onClick={() => adicionarAoCarrinho(course)} >
+                          Comprar
+                      </BeautifulButton>
+          
+                  
+
+
                       {console.log("testando" +carrinho)}
                   </Grid>
                  </CardContent>

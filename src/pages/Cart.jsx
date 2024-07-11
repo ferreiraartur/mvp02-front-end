@@ -11,6 +11,7 @@ import LeftBar  from '../components/LeftBar';
 import RightBar from '../components/RightBar';
 import { Outlet, Link } from "react-router-dom";
 import { CartContext } from "../contextAPI/CartContext";
+import BeautifulButton from '../components/BeautifulButton'
 
 
 
@@ -66,10 +67,12 @@ function Cart(){
                                         </Typography>
                                         
 
-                                        <Grid item xs={12} container justifyContent="flex-end">  
-                                            <Button  onClick={() => handleDeleteItem(course.id)} variant="contained" color="primary" sx={{ marginLeft: 'auto' }}>
+                                        <Grid item xs={12} container justifyContent="flex-end">
+                                            
+                                            <BeautifulButton onClick={() => handleDeleteItem(course.id)}>
                                                 remover
-                                            </Button>
+                                            </BeautifulButton>
+
                                         </Grid>
                                     </CardContent>
                                 </Grid>
