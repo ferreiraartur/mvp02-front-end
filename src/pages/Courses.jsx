@@ -1,19 +1,14 @@
-import React, { useState, createContext, useContext, useEffect } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import Drawer from '@mui/material/Drawer';
-import Divider from '@mui/material/Divider';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import { Toolbar,CardMedia } from '@mui/material';
 import LeftBar  from '../components/LeftBar';
 import RightBar from '../components/RightBar'
-import NavBar from  '../components/NavBar'
 import dados from '../dados.json'
-import Cart from '../pages/Cart'
 import BeautifulButton from '../components/BeautifulButton'
 
 // 3 - Consumir o contexto
@@ -23,9 +18,6 @@ import { CartContext } from "../contextAPI/CartContext";
 function Courses(){
 
   const { carrinho,adicionarAoCarrinho } = useContext(CartContext);
-
-
-  //const [disabled, setDisabled] = useState(false);
   const [courses, setCourses] = useState([]);
 
   useEffect(() => {
@@ -77,22 +69,10 @@ function Courses(){
                    Preço: R$ {course.price}
                   </Typography>
 
-                  <Grid item xs={12} container justifyContent="flex-end">
-                      
-                  
-                      {/*
-                      <Button onClick={() => adicionarAoCarrinho(course)} variant="contained" color="primary" sx={{ marginLeft: 'auto' }}>
-                       Comprar
-                      </Button>
-          */}
-                      <BeautifulButton onClick={() => adicionarAoCarrinho(course)} >
+                  <Grid item xs={12} container justifyContent="flex-end">                    
+                    <BeautifulButton onClick={() => adicionarAoCarrinho(course)} >
                           Comprar
-                      </BeautifulButton>
-          
-                  
-
-
-                      {console.log("testando" +carrinho)}
+                    </BeautifulButton>
                   </Grid>
                  </CardContent>
                 </Grid>

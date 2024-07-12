@@ -1,6 +1,4 @@
 import React from "react";
-import NavBar from '../components/NavBar.jsx';
-import Layout  from "../components/Layout.jsx";
 import BannerSlider from '../components/BannerSlider.jsx'
 import CourseCarousel from '../components/CourseCarousel.jsx';
 import Sentence from '../components/Sentence.jsx';
@@ -44,7 +42,7 @@ const courses = [
       description: 'Fundamental para quem deseja aprender uma das linguagens de programação mais populares.',
       imageUrl: '/src/assets/cards/card06.png',
     },
-    // Adicione mais cursos conforme necessário
+    
   ];
 
 function Home(){

@@ -99,11 +99,11 @@ function Cart(){
                                             Resumo de compra
                                         </Typography>
                                         <Typography variant="body1" component="div">
-                                            Subtotal: ${getTotal()}
+                                            Subtotal: R${getTotal()}
                                         </Typography>
                                         
                                         <Typography variant="h7">
-                                            Total: ${getTotal()} 
+                                            Total: R${getTotal()} 
                                         </Typography>
                                         
                                         

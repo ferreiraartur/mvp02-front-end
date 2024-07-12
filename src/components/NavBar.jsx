@@ -15,8 +15,8 @@ import Badge from '@mui/material/Badge';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Outlet, Link } from "react-router-dom";
-import CartModal2 from '../components/CartModal2';
-import CartModal3 from '../components/CartModal3';
+import PopoverCart from '../components/PopoverCart';
+
 
 
 import { CartContext } from "../contextAPI/CartContext";
@@ -190,7 +190,7 @@ function NavBar() {
                           <ShoppingCartIcon />
                         </Badge>
                       </IconButton>
-                      <CartModal2 sx={{ p: 2 }}  anchorEl={anchorEl} handleClose={handleClose} id={id}> </CartModal2>
+                      <PopoverCart sx={{ p: 2 }}  anchorEl={anchorEl} handleClose={handleClose} id={id}> </PopoverCart>
 
 
                       <Button sx={{ ...loginStyles, borderRadius: '16px' }} color="inherit">Sign in</Button>

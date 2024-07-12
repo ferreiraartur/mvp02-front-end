@@ -1,4 +1,4 @@
-import React, { useState, createContext, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -7,7 +7,6 @@ import Button from '@mui/material/Button';
 import { Toolbar } from '@mui/material';
 import LeftBar  from '../components/LeftBar';
 import RightBar from '../components/RightBar'
-import { Outlet, Link } from "react-router-dom";
 import {FormControl, TextField, Divider} from '@mui/material'
 import Pagamento from '../components/Pagamento'
 import { CartContext } from "../contextAPI/CartContext";

@@ -1,6 +1,3 @@
-import { useState, createContext, useContext } from 'react';
-import LeftBar from "../components/LeftBar";
-import RightBar from "../components/RightBar";
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Toolbar from '@mui/material/Toolbar';
